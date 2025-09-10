@@ -562,19 +562,19 @@
 
 					<!-- modify this form HTML and place wherever you want your form -->
 <form action="https://formspree.io/f/xeolnzlb" method="POST">
-  <label class="form-group col-md-12">
+	<div class="row">
+    <label class="form-group col-md-12">
 	  <input type="text" name="name" class="form-control" id="first-name" placeholder="Name" required="required">
+   </label>
+   <label class="form-group col-md-12">
+    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
   </label>
-<label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
+  <label class="form-group col-md-12 mbnone">
+    <textarea rows="6" name="message" class="form-control" id="description" placeholder="Your Message" required="required"></textarea>
   </label>
   <!-- your other form fields go here -->
   <button type="submit" class="btn btn-lg btn-contact-bg" >Send message</button>
+</div>
 </form>
 					
 					<form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
