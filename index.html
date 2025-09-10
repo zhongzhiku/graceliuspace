@@ -558,7 +558,7 @@
                             </div>
 							<div class="col-md-12">
 								<div class="actions">
-									<button type="submit" class="btn btn-lg btn-contact-bg">Send message</button>
+									<button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
 								</div>
 							</div>
 						</div>
@@ -570,6 +570,7 @@
                      e.preventDefault();
                      const form = e.target;
                      const status = document.getElementById("form-status");
+					 const submitBtn = document.getElementById("submitBtn");
 					   
 
                         let data = new FormData(form);
@@ -588,6 +589,9 @@
              } catch (error) {
                    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
                       }
+					   // 恢复按钮状态
+                     submitBtn.disabled = false;
+                     submitBtn.innerText = "Send message";
              });
                   </script>
 
