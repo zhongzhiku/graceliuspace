@@ -571,6 +571,10 @@
                      const form = e.target;
                      const status = document.getElementById("form-status");
 					 const submitBtn = document.getElementById("submitBtn");
+
+					   // 修改按钮状态
+                       submitBtn.disabled = true;
+                       submitBtn.innerText = "Submitting...";
 					   
 
                         let data = new FormData(form);
