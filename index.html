@@ -558,72 +558,42 @@
                             </div>
 							<div class="col-md-12">
 								<div class="actions">
-									<input type="submit" value="Send message" class="btn btn-lg btn-contact-bg" />	
 									<button type="submit" class="btn btn-lg btn-contact-bg">Send message</button>
 								</div>
 							</div>
 						</div>
 					</form>
-					
-<form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
-  <div class="row">
-    <div class="form-group col-md-12">
-      <input type="text" name="name" class="form-control" id="first-name" placeholder="Name" required>
-    </div>
-    <div class="form-group col-md-12">
-      <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-    </div>
-    <div class="form-group col-md-12 mbnone">
-      <textarea rows="6" name="message" class="form-control" id="description" placeholder="Your Message" required></textarea>
-    </div>
+                    <!-- 提交反馈消息 -->
+                    <div id="form-status" style="margin-top:15px;"></div>
 
-    <!-- 🛡️ Honeypot 防垃圾字段 -->
-    <div style="display:none;">
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-    </div>
+                   <script>
+                   document.getElementById("contact-form").addEventListener("submit", async function(e) {
+                     e.preventDefault();
+                     const form = e.target;
+                     const status = document.getElementById("form-status");
 
-    <div class="col-md-12">
-      <div class="actions">
-		  <input type="submit" value="Send message" class="btn btn-lg btn-contact-bg" />	
-        <button type="submit" class="btn btn-lg btn-contact-bg">Send message</button>
-      </div>
-    </div>
-  </div>
-</form>
+                        let data = new FormData(form);
+                    try {
+                      let response = await fetch(form.action, {
+                        method: form.method,
+                        body: data,
+                       headers: { 'Accept': 'application/json' }
+                     });
+                  if (response.ok) {
+                      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+                      form.reset();
+              } else {
+                     status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+                      }
+             } catch (error) {
+                   status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+                      }
+             });
+            </script>
+                 </div>
+				<!-- End web form -->
 
-<!-- 提交反馈消息 -->
-<div id="form-status" style="margin-top:15px;"></div>
-
-<script>
-document.getElementById("contact-form").addEventListener("submit", async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const status = document.getElementById("form-status");
-
-  let data = new FormData(form);
-  try {
-    let response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
-      form.reset();
-    } else {
-      status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
-    }
-  } catch (error) {
-    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
-  }
-});
-</script>
-
-					
-				</div>
-
-				
-				 
+ 
 				<!-- END COL -->
 				<div class="col-md-5 col-sm-5 col-xs-12">
 					<div class="single_address">
