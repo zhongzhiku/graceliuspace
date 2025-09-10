@@ -543,9 +543,7 @@
 				<div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
 					<form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="post">
 						<div class="row">
-							<div class="form-group col-md-12">
-								<input type="text" name="name" class="form-control" id="first-name" placeholder="Name" required="required">
-							</div>
+							
 							<div class="form-group col-md-12">
 								<input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
 							</div>
@@ -560,6 +558,23 @@
 							</div>
 						</div>
 					</form>
+
+					<!-- modify this form HTML and place wherever you want your form -->
+<form action="https://formspree.io/f/xeolnzlb" method="POST">
+  <label>
+	  <input type="text" name="name" class="form-control" id="first-name" placeholder="Name" required="required">
+  </label>
+<label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit" class="btn btn-lg btn-contact-bg" >Send message</button>
+</form>
 					
 					<form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
                         <div class="row">
