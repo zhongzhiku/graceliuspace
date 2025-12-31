@@ -1,116 +1,106 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
     <title>社媒平台手机与PC发帖权重对比 | Grace Studio海外社媒工作室</title>
     <meta name="description" content="主流海外社媒平台「权重 & 推荐机制」深度分析">
     <meta name="keywords" content="社媒权重, 手机发帖, PC发帖, 社交媒体策略">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.css">
+    <!--prettyPhoto css-->
+    <link href="../assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>/* 全局设置 */
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
             color: #333;
-            background-color: #f8f9fa;
-            padding: 0;
-            margin: 0;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
+
+        /* 标题样式 */
+        h1, h2, h3 {
             color: #2c3e50;
-            margin-bottom: 1.5rem;
+            margin-bottom: 10px;
         }
-        
-        h1 {
-            font-size: 2.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #3498db;
-            display: inline-block;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            margin-top: 2.5rem;
-            color: #2980b9;
-        }
-        
-        h3 {
-            font-size: 1.5rem;
-            color: #34495e;
-            margin-top: 2rem;
-        }
-        
+
+        /* 段落样式 */
         p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 列表样式 */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
         }
         
-        .content-section {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        
-        .summary-box {
-            background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
-            border-left: 5px solid #1976d2;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
-        
+        /* 表格样式 */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
+            margin: 20px 0;
             background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
         
         th, td {
-            padding: 1rem;
+            padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #e0e0e0;
         }
@@ -125,379 +115,570 @@
             background-color: #f8f9fa;
         }
         
-        .platform-row {
-            transition: all 0.2s ease;
+        .highlight {
+            background-color: #e6f7ff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: bold;
         }
         
-        .platform-row:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .section-title {
+            padding: 20px 0;
         }
         
-        .phone-fav {
-            color: #27ae60;
-            font-weight: 600;
+        .platform-icon {
+            font-size: 1.5rem;
+            margin-right: 5px;
+            vertical-align: middle;
         }
         
-        .pc-fav {
-            color: #2980b9;
-            font-weight: 600;
-        }
-        
-        .neutral {
-            color: #7f8c8d;
-            font-weight: 600;
-        }
-        
-        .stars {
-            color: #f39c12;
-            letter-spacing: 2px;
-        }
-        
-        .key-takeaway {
-            background: #fff8e6;
-            border-left: 5px solid #ffc107;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-        
-        .best-practice {
-            background: #e8f5e9;
-            border-left: 5px solid #4caf50;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-        
-        .platform-analysis {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .platform-card {
-            flex: 1 1 calc(50% - 1.5rem);
-            min-width: 300px;
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            border-top: 4px solid #3498db;
-        }
-        
-        .platform-card h4 {
-            display: flex;
+        .platform-title {
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            font-weight: 600;
             color: #2c3e50;
         }
         
-        .tiktok-card {
-            border-top-color: #ee1d52;
+        .recommendation-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
         }
         
-        .ig-card {
-            border-top-color: #e1306c;
+        .conclusion-box {
+            background: #f0f8ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #2980b9;
         }
         
-        .fb-card {
-            border-top-color: #3b5998;
+        .stars {
+            color: #ffd700;
+            font-size: 1.2em;
         }
         
-        .yt-card {
-            border-top-color: #ff0000;
+        .phone-color {
+            color: #1abc9c;
         }
         
-        .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+        .pc-color {
+            color: #3498db;
         }
         
-        @media (max-width: 768px) {
-            .platform-card {
-                flex: 1 1 100%;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.7rem;
-            }
+        .warning {
+            background-color: #fff8e6;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 15px 0;
         }
         
-        .icon {
-            font-size: 1.5rem;
-            width: 30px;
-            display: inline-flex;
-            justify-content: center;
+        .best-practice {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px 15px;
+            margin: 15px 0;
         }
+
     </style>
+
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">Grace Studio</div>
-            <p class="subtitle">海外社媒营销策略与内容优化专家</p>
-        </div>
-    </header>
-    
+
+<body data-spy="scroll" data-offset="80">
+
+
+<!-- START NAVBAR -->
+<div id="sticker" class="navbar navbar-default menu-top">
     <div class="container">
-        <div class="content-section">
-            <h1>📱 手机发帖 vs 💻 PC 发帖：社媒平台权重深度分析</h1>
-            <p>在社交媒体营销中，内容发布方式对内容传播和算法推荐有着至关重要的影响。本文将深入分析主流海外社媒平台的权重机制，帮助您制定更有效的内容发布策略。</p>
-            
-            <div class="summary-box">
-                <h3>核心结论</h3>
-                <p>大多数社媒平台对内容的权重排序为：<strong>手机原生发布</strong> > <strong>PC浏览器发布</strong> > <strong>第三方工具发布</strong></p>
-                <p>短视频平台（TikTok、Instagram Reels）尤其偏向手机端发布，而专业内容平台（LinkedIn、Twitter）对PC发布更加友好。</p>
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand"><img src="../assets/img/logo.png" alt="logo"></a>
         </div>
-        
-        <div class="content-section">
-            <h2>平台权重对比总览</h2>
-            <p>下表总结了各平台对手机与PC发帖的权重评估（基于行业实测与数据分析）：</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>平台</th>
-                        <th>手机发布权重</th>
-                        <th>PC发布权重</th>
-                        <th>权重差异</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-tiktok icon"></i> TikTok</td>
-                        <td><span class="stars">★★★★★</span></td>
-                        <td><span class="stars">★★☆☆☆</span></td>
-                        <td class="phone-fav">强烈偏向手机</td>
-                    </tr>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-instagram icon"></i> Instagram</td>
-                        <td><span class="stars">★★★★★</span></td>
-                        <td><span class="stars">★★☆☆☆</span></td>
-                        <td class="phone-fav">几乎只认手机</td>
-                    </tr>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-facebook icon"></i> Facebook</td>
-                        <td><span class="stars">★★★★☆</span></td>
-                        <td><span class="stars">★★★☆☆</span></td>
-                        <td class="phone-fav">手机略优</td>
-                    </tr>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-youtube icon"></i> YouTube</td>
-                        <td><span class="stars">★★★★☆</span></td>
-                        <td><span class="stars">★★★★☆</span></td>
-                        <td class="neutral">几乎无差别</td>
-                    </tr>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-twitter icon"></i> X (Twitter)</td>
-                        <td><span class="stars">★★★☆☆</span></td>
-                        <td><span class="stars">★★★★☆</span></td>
-                        <td class="pc-fav">PC略优</td>
-                    </tr>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-linkedin icon"></i> LinkedIn</td>
-                        <td><span class="stars">★★★★☆</span></td>
-                        <td><span class="stars">★★★★☆</span></td>
-                        <td class="neutral">基本无差别</td>
-                    </tr>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-pinterest icon"></i> Pinterest</td>
-                        <td><span class="stars">★★★☆☆</span></td>
-                        <td><span class="stars">★★★★☆</span></td>
-                        <td class="pc-fav">PC略优</td>
-                    </tr>
-                    <tr class="platform-row">
-                        <td><i class="fab fa-snapchat icon"></i> Snapchat</td>
-                        <td><span class="stars">★★★★★</span></td>
-                        <td><span class="stars">不适用</span></td>
-                        <td class="phone-fav">仅支持手机</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="navbar-collapse collapse">
+            <nav>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="../index.html">Home</a></li>
+                    <li><a class="page-scroll" href="#post">POST</a></li>
+                    <li><a class="page-scroll" href="https://news.graceliu.space" target="_blank">Blog</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <div class="content-section">
-            <h2>为什么手机发帖权重更高？</h2>
-            
-            <h3>1. 行为真实性（最关键因素）</h3>
-            <p>社交媒体平台通过用户行为模式判断账号是否为"真人运营"。手机端发布提供了更多真实用户信号：</p>
-            <ul>
-                <li>真实设备识别（iOS/Android系统）</li>
-                <li>原生App行为模式（滑动、点赞、评论等交互）</li>
-                <li>系统级调用（相机、相册、麦克风、位置等权限）</li>
-            </ul>
-            
-            <div class="key-takeaway">
-                <p>📌 PC + 浏览器 ≠ 原生用户行为，平台算法更容易将其识别为营销行为或自动化操作。</p>
+    </div>
+    <!--- END CONTAINER -->
+</div>
+<!-- END NAVBAR -->
+
+<!-- START POSTS TABLE -->
+<section id="post" class="our_pricing section-padding">
+    <div class="container">
+        <div class="row pricing">
+            <div class="section-title text-center wow zoomIn">
+                <h1>📱 手机发帖 vs 💻 PC 发帖：社媒平台权重深度分析</h1>
+                <p class="lead">主流海外社媒平台「权重 & 推荐机制」对比与策略优化</p>
             </div>
-            
-            <h3>2. 内容形态匹配度</h3>
-            <p>不同内容类型在不同设备上的表现差异明显：</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>内容类型</th>
-                        <th>更适合的设备</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>短视频/Reels/Shorts</td>
-                        <td class="phone-fav">手机</td>
-                    </tr>
-                    <tr>
-                        <td>Stories/快拍</td>
-                        <td class="phone-fav">手机</td>
-                    </tr>
-                    <tr>
-                        <td>长文/行业洞察</td>
-                        <td class="pc-fav">PC</td>
-                    </tr>
-                    <tr>
-                        <td>B2B专业内容</td>
-                        <td class="neutral">PC/手机均可</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h3>3. 平台风控与限流机制</h3>
-            <p>社交媒体平台常见的"隐性限流信号"包括：</p>
-            <ul>
-                <li>新账号+PC频繁发帖</li>
-                <li>PC端复制粘贴大量内容</li>
-                <li>同IP/同浏览器多账号操作</li>
-                <li>自动化行为痕迹明显</li>
-            </ul>
-            
-            <div class="key-takeaway">
-                <p>⚠️ 尤其对TikTok和Instagram，平台算法对PC端发布行为极其敏感，容易触发限流机制。</p>
-            </div>
-        </div>
-        
-        <div class="content-section">
-            <h2>平台深度解析</h2>
-            
-            <div class="platform-analysis">
-                <div class="platform-card tiktok-card">
-                    <h4><i class="fab fa-tiktok"></i> TikTok</h4>
+            <div>
+                <div class="conclusion-box">
+                    <h2>核心结论：</h2>
+                    <p>多数社媒平台 = <span class="highlight phone-color">手机原生发布</span> > <span class="highlight pc-color">PC发布</span> > <span class="highlight">第三方工具发布</span></p>
+                </div>
+                
+                <h2 id="overview">一、平台总览结论表（美国市场实测 + 行业共识）</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>平台</th>
+                            <th>手机原生发布</th>
+                            <th>PC浏览器发布</th>
+                            <th>权重差异结论</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-music platform-icon"></i>TikTok</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐⭐</span></td>
+                            <td><span class="stars">⭐⭐</span></td>
+                            <td>强烈偏向手机</td>
+                        </tr>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-instagram platform-icon"></i>Instagram</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐⭐</span></td>
+                            <td><span class="stars">⭐⭐</span></td>
+                            <td>几乎只认手机</td>
+                        </tr>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-facebook platform-icon"></i>Facebook</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                            <td><span class="stars">⭐⭐⭐</span></td>
+                            <td>手机略优</td>
+                        </tr>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-youtube-play platform-icon"></i>YouTube</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                            <td>几乎无差别</td>
+                        </tr>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-twitter platform-icon"></i>X（Twitter）</span></td>
+                            <td><span class="stars">⭐⭐⭐</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                            <td>PC略优</td>
+                        </tr>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-linkedin platform-icon"></i>LinkedIn</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                            <td>基本无差别</td>
+                        </tr>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-pinterest-p platform-icon"></i>Pinterest</span></td>
+                            <td><span class="stars">⭐⭐⭐</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                            <td>PC略优</td>
+                        </tr>
+                        <tr>
+                            <td><span class="platform-title"><i class="fa fa-snapchat-ghost platform-icon"></i>Snapchat</span></td>
+                            <td><span class="stars">⭐⭐⭐⭐⭐</span></td>
+                            <td><span>❌</span></td>
+                            <td>仅支持手机</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2 id="why-phone">二、为什么「手机发帖权重更高」？</h2>
+                
+                <h3>1️⃣ 行为真实性（最关键）</h3>
+                <p>平台判断账号是否「真人运营」的重要信号：</p>
+                <ul>
+                    <li>真实设备（iOS / Android）</li>
+                    <li>原生 App 行为（滑动、观看、点赞、评论）</li>
+                    <li>系统级调用（相册、摄像头、麦克风）</li>
+                </ul>
+                <p class="highlight">👉 PC + 浏览器 ≠ 原生用户行为</p>
+                
+                <h3>2️⃣ 内容形态匹配度</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>内容类型</th>
+                            <th>更适合</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>短视频 / Reels / Shorts</td>
+                            <td><span class="phone-color">手机</span></td>
+                        </tr>
+                        <tr>
+                            <td>Stories / Snapchat</td>
+                            <td><span class="phone-color">手机</span></td>
+                        </tr>
+                        <tr>
+                            <td>长文 / 行业洞察</td>
+                            <td><span class="pc-color">PC</span></td>
+                        </tr>
+                        <tr>
+                            <td>B2B专业内容</td>
+                            <td>PC / 手机均可</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>3️⃣ 风控 & 限流机制</h3>
+                <p>平台常见「隐性限流信号」包括：</p>
+                <ul>
+                    <li>新号 + PC频繁发帖</li>
+                    <li>PC端复制粘贴大量内容</li>
+                    <li>同IP / 同浏览器多账号操作</li>
+                    <li>自动化痕迹明显</li>
+                </ul>
+                <p class="highlight">👉 尤其对 TikTok / IG 极其敏感</p>
+                
+                <h2 id="platform-analysis">三、平台逐个深度解析（重点平台）</h2>
+                
+                <div class="recommendation-card">
+                    <h3 class="phone-color"><i class="fa fa-music"></i> TikTok（重点）</h3>
                     <p><strong>权重排序：</strong></p>
-                    <p>手机原生App发布 > 手机拍摄+剪辑 > PC上传 > 第三方工具</p>
+                    <p>手机原生 App 发布 ＞ 手机拍摄+剪辑 ＞ PC上传 ＞ 第三方工具</p>
                     
-                    <div class="key-takeaway">
+                    <div class="warning">
                         <p><strong>⚠️ 风控重点：</strong></p>
                         <ul>
-                            <li>新号前7-14天强烈建议只用手机</li>
-                            <li>PC发布容易导致初始流量受限</li>
-                            <li>PC发视频更容易进入"冷启动失败"</li>
+                            <li>新号前 7–14 天 强烈建议只用手机</li>
+                            <li>用 PC 发布 ≠ 封号，但容易初始不给流量</li>
+                            <li>PC发视频更容易进入「冷启动失败」</li>
                         </ul>
                     </div>
                     
                     <div class="best-practice">
-                        <p><strong>✅ 最佳做法：</strong></p>
+                        <p><strong>✅ 最佳做法</strong></p>
                         <ul>
-                            <li>手机拍摄 + 手机剪辑 + 手机发布</li>
-                            <li>前30条视频100%手机完成</li>
+                            <li>手机拍 + 手机剪 + 手机发</li>
+                            <li>前 30 条视频 100% 手机完成</li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="platform-card ig-card">
-                    <h4><i class="fab fa-instagram"></i> Instagram</h4>
-                    <p>Reels和Stories强烈偏向手机端发布，PC发帖功能是"后加的"。</p>
+                <div class="recommendation-card">
+                    <h3 class="phone-color"><i class="fa fa-instagram"></i> Instagram（含 Reels）</h3>
+                    <p>Reels = 强手机平台</p>
+                    <p>PC发帖功能本来就是"后加的"</p>
                     
-                    <div class="key-takeaway">
+                    <div class="warning">
                         <p><strong>⚠️ 风险点：</strong></p>
                         <ul>
-                            <li>PC发Reels，初始推荐池明显小</li>
-                            <li>PC无法发Story（重要互动入口）</li>
+                            <li>PC发 Reels，初始推荐池明显小</li>
+                            <li>PC无法发 Story（重要互动入口）</li>
                         </ul>
                     </div>
                     
                     <div class="best-practice">
                         <p><strong>✅ 建议：</strong></p>
                         <ul>
-                            <li>Reels/Story → 手机发布</li>
-                            <li>图文Feed → 可PC，但手机更稳</li>
+                            <li>Reels / Story → <span class="phone-color">手机</span></li>
+                            <li>图文 Feed → 可 <span class="pc-color">PC</span>，但手机更稳</li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="platform-card fb-card">
-                    <h4><i class="fab fa-facebook"></i> Facebook</h4>
-                    <p>对PC友好度较高，B端内容（案例/文章）PC无明显惩罚。</p>
-                    <p><strong>但需注意：</strong></p>
+                <div class="recommendation-card">
+                    <h3><i class="fa fa-facebook"></i> Facebook（公司主页）</h3>
+                    <p>对 PC友好度较高</p>
+                    <p>B端内容（案例 / 文章）PC无明显惩罚</p>
+                    <p><strong>但：</strong></p>
                     <ul>
                         <li>视频内容：手机发布互动更高</li>
                         <li>本地/生活方式内容：手机更优</li>
                     </ul>
                 </div>
                 
-                <div class="platform-card yt-card">
-                    <h4><i class="fab fa-youtube"></i> YouTube</h4>
-                    <p><strong>长视频：</strong></p>
-                    <p>PC/手机几乎无权重差，核心看：</p>
+                <div class="recommendation-card">
+                    <h3><i class="fa fa-youtube-play"></i> YouTube（Shorts & 长视频）</h3>
+                    <p><strong>长视频</strong></p>
+                    <p>PC / 手机 几乎无权重差</p>
+                    <p>核心看：</p>
                     <ul>
                         <li>完播率</li>
                         <li>停留时长</li>
                         <li>点击率（封面+标题）</li>
                     </ul>
                     
-                    <p><strong>Shorts：</strong></p>
+                    <p><strong>Shorts</strong></p>
                     <p>手机稍优，但差距不大</p>
-                    
-                    <div class="best-practice">
-                        <p>📌 内容质量 > 发布设备</p>
-                    </div>
+                    <p class="highlight">内容质量 > 发布设备</p>
+                </div>
+                
+                <div class="recommendation-card">
+                    <h3 class="pc-color"><i class="fa fa-twitter"></i> X（Twitter）</h3>
+                    <p>PC发帖完全没问题</p>
+                    <p>新闻、行业、B2B内容，PC反而更自然</p>
+                    <p>API、第三方工具也较宽松</p>
+                </div>
+                
+                <div class="recommendation-card">
+                    <h3><i class="fa fa-linkedin"></i> LinkedIn（B2B）</h3>
+                    <p>PC ≈ 手机</p>
+                    <p>平台本身就是办公场景</p>
+                    <p class="highlight">内容价值 > 设备</p>
+                </div>
+                
+                <h2 id="scheduling">四、定时发布工具 vs 手动发布</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>发布方式</th>
+                            <th>权重</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>手机手动</td>
+                            <td><span class="stars">⭐⭐⭐⭐⭐</span></td>
+                        </tr>
+                        <tr>
+                            <td>官方定时（平台内）</td>
+                            <td><span class="stars">⭐⭐⭐⭐</span></td>
+                        </tr>
+                        <tr>
+                            <td>第三方工具（Buffer/Hootsuite）</td>
+                            <td><span class="stars">⭐⭐⭐</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p class="warning">📌 TikTok / IG：强烈不建议使用第三方定时工具，有被限流风险</p>
+                
+                <h2 id="strategy">五、你的「最优实操方案」</h2>
+                
+                <div class="recommendation-card">
+                    <h3 class="phone-color">🚀 新账号 / 冷启动期（0–30天）</h3>
+                    <ul>
+                        <li>100% 手机发布</li>
+                        <li>不用任何定时工具</li>
+                        <li>模仿真人使用路径（刷→赞→评→发）</li>
+                        <li>每账号每日操作不超过3小时</li>
+                    </ul>
+                </div>
+                
+                <div class="recommendation-card">
+                    <h3>📈 稳定期（30天+）</h3>
+                    <ul>
+                        <li>短视频内容：坚持使用<span class="phone-color">手机</span></li>
+                        <li>图文内容：使用<span class="pc-color">PC</span>或官方定时工具</li>
+                        <li>B2B平台（LinkedIn/FB）：可使用<span class="pc-color">PC</span></li>
+                        <li>第三方工具仅用于非核心平台</li>
+                    </ul>
+                </div>
+                
+                <div class="conclusion-box">
+                    <h2>六、一句话总结</h2>
+                    <p><span class="highlight phone-color">短视频平台 = 手机即权重</span></p>
+                    <p><span class="highlight">B2B平台 = 内容即权重</span></p>
+                    <p><span class="highlight">第三方工具 = 最后选择</span></p>
                 </div>
             </div>
-        </div>
-        
-        <div class="content-section">
-            <h2>发布策略建议</h2>
-            
-            <h3>新账号/冷启动期（0-30天）</h3>
-            <div class="best-practice">
-                <ul>
-                    <li>100% 手机发布</li>
-                    <li>不用任何定时工具</li>
-                    <li>模仿真人使用路径（刷→赞→评→发）</li>
-                    <li>每账号每日操作不超过3小时</li>
-                </ul>
+      </div>
+    <!--- END ROW -->
+  </div>
+<!--- END CONTAINER -->
+</section>
+<!-- END POSTS TABLE -->
+
+
+<!-- START CONTACT FORM  -->
+<section id="contact" class="contact-us section-padding">
+    <div class="container">
+        <div class="row ">
+            <div class="section-title text-center wow zoomIn">
+                <h2>Get in touch</h2>
+                <span></span>
             </div>
-            
-            <h3>稳定期（30天+）</h3>
-            <div class="best-practice">
-                <ul>
-                    <li>短视频内容：坚持使用手机发布</li>
-                    <li>图文内容：使用PC或官方定时工具</li>
-                    <li>B2B平台（LinkedIn/FB）：可使用PC</li>
-                    <li>第三方工具仅用于非核心平台</li>
-                </ul>
-            </div>
-            
-            <div class="summary-box">
-                <h3>最终建议</h3>
-                <p>短视频平台 = 手机即权重 | B2B平台 = 内容即权重 | 第三方工具 = 最后选择</p>
-            </div>
-        </div>
+            <div class="contact" style="background-image: url(../assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                <!-- web form -->
+                <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <input type="text" name="name" class="form-control" placeholder="Name" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                          <input type="email" name="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group col-md-12 mbnone">
+                          <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                      </div>
+
+                      <!-- Honeypot 防垃圾 -->
+                      <div style="display:none;">
+                          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                      </div>
+
+                      <!-- Cloudflare Turnstile 验证 -->
+                      <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAAB2DjWw2W65iSLaN"></div>
+
+                      <div class="col-md-12">
+                          <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+<!-- 提交反馈消息 -->
+<div id="form-status" style="margin-top:15px;"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+
+  // 获取 Turnstile token
+      const token = document.querySelector('input[name="cf-turnstile-response"]')?.value;
+      if (!token) {
+        status.innerHTML = "<p style='color:red;'>⚠️ 请先完成验证码验证</p>";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send message";
+        return;
+    }
+
+    let data = new FormData(form);
+  data.append("cf-turnstile-response", token); // 附加 Turnstile token
+
+  try {
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+  });
+
+    if (response.ok) {
+      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+      form.reset();
+      if (window.turnstile) turnstile.reset(); // 重置验证码
+  } else {
+      status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+  }
+
+} catch (error) {
+    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+}
+
+submitBtn.disabled = false;
+submitBtn.innerText = "Send message";
+});
+</script>
+
+
+</div>
+<!-- End web form -->
+<!-- END COL -->
+<div class="col-md-5 col-sm-5 col-xs-12">
+    <div class="single_address">
+        <i class="fa fa-rocket color-five"></i>
+        <h4>Our Location</h4>
+
+        <p>Hong Kong、Shenzhen 、Miami</p>
     </div>
-    
-    <footer>
-        <div class="container">
-            <p>© 2015-2025 Grace Studio 海外社媒工作室</p>
-            <p>联系我们: service@graceliu.space | 关注我们的社交媒体获取最新策略更新</p>
-        </div>
-    </footer>
+    <div class="single_address">
+        <i class="fa fa-phone color-six"></i>
+        <h4>Call us on</h4>
+
+        <p>+(852) 6501 3956 </p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-envelope color-seven"></i>
+        <h4>Send message</h4>
+
+        <p>service@graceliu.space</p>
+    </div>
+    <div class="single_address single_address_mbnone">
+        <i class="fa fa-lightbulb-o color-eight"></i>
+        <h4>Working Hours</h4>
+
+        <p>Sat-Mon:10.00AM-5.00PM</p>
+    </div>
+</div>
+<!-- END COL -->
+</div>
+<!-- END CONTACT -->
+</div>
+<!-- END ROW -->
+</div>
+<!--- END CONTAINER -->
+</section>
+<!-- END CONTACT FORM -->
+
+<!-- START MAP -->
+<!---<div id="map"></div>--->
+<!-- END MAP -->
+
+<!-- START FOOTER BOTTOM -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <p class="footer_copyright">Copyright &copy; 2015-2025.Grace Studio</p>
+            </div>
+            <!--- END COL -->
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <div class="footer_social">
+                    <ul>
+                        <li><a class="f_linkedin" target="_blank"
+                         href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i
+                         class="fa fa-linkedin"></i></a></li>
+                         <li><a class="f_wechat" target="_blank" href="../Carolyn_Wachat.jpg"><i
+                            class="fa fa-wechat"></i></a></li>
+                            <li><a class="f_envelope" href="mailto:service@graceliu.space"><i
+                                class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </footer>
+<!-- END FOOTER BOTTOM-->
+
+<!-- turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Latest jQuery -->
+<script src="../assets/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizer JS -->
+<script src="../assets/js/modernizr-2.8.3.min.js"></script>
+<!-- stellar js -->
+<script src="../assets/js/jquery.stellar.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="../assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- jquery.prettyPhoto js -->
+<script src="../assets/js/jquery.prettyPhoto.js"></script>
+<!-- scrolltopcontrol js -->
+<script src="../assets/js/scrolltopcontrol.js"></script>
+<!-- form-contact js -->
+<script src="../assets/js/form-contact.js"></script>
+<!-- WOW - Reveal Animations When You Scroll -->
+<script src="../assets/js/wow.min.js"></script>
+<!-- map js -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>--->
+<!-- scripts js -->
+<script src="../assets/js/scripts.js"></script>
 </body>
 </html>
