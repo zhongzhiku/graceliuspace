@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="绕开 Page Like 1-day click 限制的实战组合打法">
+    <meta name="keywords" content="海外社媒、出海咨询、独立站运营">
+    <meta name="author" content="Grace Studio海外社媒工作室">
+    
+    <!-- 标题 -->
+    <title>用 Website 7-day Click 逻辑反推 Instagram 拉粉质量 | Grace Studio海外社媒工作室</title>
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/prettyPhoto.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- 内联关键CSS -->
+    <style>
+        /* 关键渲染路径CSS */
+        body {
+            font-family: 'Open Sans', 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+        
+        .section-title h1, 
+        .section-title h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #1c5d99;
+            text-decoration: underline;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        blockquote {
+            border-left: 4px solid #2980b9;
+            padding: 15px 20px;
+            margin: 20px 0;
+            color: #555;
+            font-style: italic;
+            background-color: #f0f7ff;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* 导航栏粘性定位 */
+        .navbar-default.menu-top {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* 内容区域 */
+        .our_pricing {
+            padding: 60px 0;
+        }
+        
+        /* 目录导航 */
+        .table-of-contents {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .table-of-contents h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        
+        .table-of-contents ul {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        .table-of-contents li {
+            margin-bottom: 10px;
+        }
+        
+        .table-of-contents a {
+            color: #495057;
+            display: block;
+            padding: 5px 0;
+            border-bottom: 1px dashed #dee2e6;
+        }
+        
+        .table-of-contents a:hover {
+            color: #2980b9;
+            border-bottom-color: #2980b9;
+        }
+        
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #2980b9;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #1c5d99;
+            transform: translateY(-3px);
+        }
+        
+        /* 社交媒体分享按钮 */
+        .social-share {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        
+        .social-share a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f1f1f1;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .social-share a:hover {
+            background: #2980b9;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            h3 {
+                font-size: 18px;
+            }
+            
+            .our_pricing {
+                padding: 30px 0;
+            }
+            
+            .table-of-contents {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-offset="80">
+    <!-- 导航栏 -->
+    <div id="sticker" class="navbar navbar-default menu-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="切换导航">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../assets/img/logo.png" alt="Grace Studio Logo">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <nav>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="../index.html">首页</a></li>
+                        <li><a class="page-scroll" href="#post">文章</a></li>
+                        <li><a class="page-scroll" href="https://news.graceliu.space" target="_blank" rel="noopener">博客</a></li>
+                        <li><a class="page-scroll" href="#contact">联系我们</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文章内容 -->
+    <section id="post" class="our_pricing section-padding">
+        <div class="container">
+            <div class="row pricing">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow zoomIn">
+                        <h1>用 Website 7-day Click 逻辑，反推 Instagram 拉粉质量</h1>
+                        <p class="lead">一套绕开 Page Like 1-day click 限制的实战组合打法</p>
+                    </div>
+                    
+                    <!-- 目录导航 -->
+                    <div class="table-of-contents">
+                        <h3>文章目录</h3>
+                        <ul>
+                            <li><a href="#section-1">为什么 Page Like 被锁死在 1-day click？</a></li>
+                            <li><a href="#section-2">核心思路：用 Website 当"质量验证器"</a></li>
+                            <li><a href="#section-3">整体结构：三层漏斗打法</a></li>
+                            <li><a href="#section-4">如何反推 IG 粉的质量？</a></li>
+                            <li><a href="#section-5">给老板的解释话术</a></li>
+                            <li><a href="#section-6">进阶用法：创意反推</a></li>
+                            <li><a href="#section-7">什么时候这套打法最有价值？</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 文章正文 -->
+                    <article>
+                        <p>在 Meta 广告体系里，很多投手都会遇到一个看似"怪异"、但其实非常系统性的问题：</p>
+                        <p>Instagram 的 Page Like 数据，几乎只能看到 1-day click。</p>
+                        <p>不是你不会设置，也不是账号出问题，而是 Meta 的规则本身就这么设计。</p>
+                        
+                        <h3>那问题来了：</h3>
+                        <p>当拉粉只能看 1-day click，我们该如何判断这些粉到底值不值？</p>
+                        <p><strong>答案是：</strong></p>
+                        <p>👉 不用 Page Like 本身判断，而是用 Website 的 7-day click，反推粉的质量。</p>
+                        
+                        <h2 id="section-1">一、为什么 Page Like 被锁死在 1-day click？</h2>
+                        <p>先把底层逻辑说清楚。</p>
+                        
+                        <h3>1. Page Like 属于「平台内即时行为」</h3>
+                        <p>在 Meta 看来，点赞或关注是一个非常短路径行为：</p>
+                        <ul>
+                            <li>看到广告</li>
+                            <li>点进去</li>
+                            <li>点 Like</li>
+                        </ul>
+                        <p>系统判断：这种行为不需要 7 天思考周期</p>
+                        <p>所以：</p>
+                        <ul>
+                            <li>Page Like</li>
+                            <li>Engagement</li>
+                            <li>IG 互动类目标</li>
+                            <li>👉 默认只给 1-day click（有时 +1-day view）</li>
+                        </ul>
+                        <p>这不是歧视，是算法定位。</p>
+                        
+                        <h3>2. 只有 Website 转化，才允许长归因窗口</h3>
+                        <p>Website 行为包括：</p>
+                        <ul>
+                            <li>View Content</li>
+                            <li>Add to Cart</li>
+                            <li>Lead</li>
+                            <li>Purchase</li>
+                        </ul>
+                        <p>这些行为具备：</p>
+                        <ul>
+                            <li>延迟决策</li>
+                            <li>回访路径</li>
+                            <li>多天思考</li>
+                        </ul>
+                        <p>因此 Meta 才开放：</p>
+                        <ul>
+                            <li>7-day click</li>
+                            <li>且往往只在 Website + Maximize Conversions 下可选</li>
+                        </ul>
+                        
+                        <h3>3. 结论很明确</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>广告目标</th>
+                                        <th>7-day click</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Page Like / Engagement</td>
+                                        <td>❌</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lead（Instant Form）</td>
+                                        <td>❌</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Website + 最大转化率</td>
+                                        <td>✅</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>所以，与其纠结为什么 Page Like 没有 7-day click，不如承认规则，然后绕开它。</p>
+                        
+                        <h2 id="section-2">二、核心思路：用 Website 当"质量验证器"</h2>
+                        <p>这套打法的核心逻辑只有一句话：</p>
+                        <p><strong>Page Like 只负责把人拉进来，Website 的 7-day click 负责验证这些人是不是"对的"。</strong></p>
+                        <p>换句话说：</p>
+                        <ul>
+                            <li>IG 拉粉是入口</li>
+                            <li>Website 转化是体检报告</li>
+                        </ul>
+                        
+                        <h2 id="section-3">三、整体结构：三层漏斗打法</h2>
+                        
+                        <h3>第 1 层：Instagram 拉粉（不追 ROI，只追人）</h3>
+                        <ul>
+                            <li><strong>目标：</strong> Page Like 或 Engagement</li>
+                            <li><strong>重点：</strong>
+                                <ul>
+                                    <li>Instagram only</li>
+                                    <li>强人设、强价值、强关注理由</li>
+                                </ul>
+                            </li>
+                            <li><strong>数据预期：</strong>
+                                <ul>
+                                    <li>接受 1-day click</li>
+                                    <li>只看：
+                                        <ul>
+                                            <li>CPM</li>
+                                            <li>Like / Engagement 成本</li>
+                                            <li>评论是否像"真人在说话"</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>这一层，不做价值判断。</p>
+                        
+                        <h3>第 2 层：互动人群沉淀（筛粉）</h3>
+                        <p>创建 Custom Audience：</p>
+                        <ul>
+                            <li>过去 7 / 14 / 30 天</li>
+                            <li>IG 视频观看</li>
+                            <li>帖子互动</li>
+                            <li>Profile Visit</li>
+                        </ul>
+                        <p><strong>这一步非常关键。</strong></p>
+                        <p>因为：不是所有关注你的人，都值得进入下一层。</p>
+                        
+                        <h3>第 3 层：Website 转化验证（拿回 7-day click）</h3>
+                        <ul>
+                            <li><strong>Campaign 设置</strong>
+                                <ul>
+                                    <li>目标：Website Conversions</li>
+                                    <li>优化方式：Maximize conversions</li>
+                                    <li>Attribution：7-day click</li>
+                                </ul>
+                            </li>
+                            <li><strong>投放人群</strong>
+                                <ul>
+                                    <li>第 2 层沉淀的 IG 互动人群</li>
+                                </ul>
+                            </li>
+                            <li><strong>转化事件选择</strong>
+                                <ul>
+                                    <li>小账号：View Content / Add to Cart</li>
+                                    <li>正常体量：Lead / Purchase</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>这一层，你终于重新获得：</p>
+                        <ul>
+                            <li>7-day click</li>
+                            <li>长决策周期</li>
+                            <li>真实意图信号</li>
+                        </ul>
+                        
+                        <h2 id="section-4">四、如何反推 IG 粉的质量？</h2>
+                        <p>不用复杂模型，只看三件事。</p>
+                        <ol>
+                            <li><strong>IG → Website CTR</strong>
+                                <ul>
+                                    <li>高：粉是"活的"</li>
+                                    <li>低：刷到即走型粉</li>
+                                </ul>
+                            </li>
+                            <li><strong>Website 7-day click 转化率</strong>
+                                <ul>
+                                    <li>高：粉有决策能力</li>
+                                    <li>低：情绪粉 / 娱乐粉</li>
+                                </ul>
+                            </li>
+                            <li><strong>CPA 变化趋势</strong>
+                                <p>如果你发现：</p>
+                                <ul>
+                                    <li>IG 拉粉成本不高</li>
+                                    <li>Website 转化 CPA 反而下降</li>
+                                </ul>
+                                <p>👉 说明你拉的是高质量粉，不是水。</p>
+                            </li>
+                        </ol>
+                        
+                        <h2 id="section-5">五、给老板的解释话术（可直接用）</h2>
+                        <blockquote>
+                            "IG Page Like 本身只能看 1-day click，但我们用 Website 的 7-day click 来验证这些粉丝后续是否真的产生行为。如果 7 天内仍然能转化，说明拉粉质量是成立的，而不是表面好看。"
+                        </blockquote>
+                        <p>这句话，能解决 80% 的质疑。</p>
+                        
+                        <h2 id="section-6">六、进阶用法：创意反推</h2>
+                        <p>你可以：</p>
+                        <ul>
+                            <li>用不同创意拉 IG 粉</li>
+                            <li>成本接近</li>
+                            <li>丢进同一个 Website 7-day click 漏斗</li>
+                        </ul>
+                        <p>最后你会看到一个很现实的结果：</p>
+                        <p><strong>最便宜的粉，往往是最贵的。</strong></p>
+                        
+                        <h2 id="section-7">七、什么时候这套打法最有价值？</h2>
+                        <ul>
+                            <li>品牌冷启动</li>
+                            <li>IG 粉涨得快，但不转化</li>
+                            <li>Page Like 被 1-day click 锁死</li>
+                            <li>老板怀疑"粉是不是水的"</li>
+                        </ul>
+                        
+                        <h2>总结一句话</h2>
+                        <p><strong>Page Like 是门面数据，Website 7-day click 是价值验证。</strong></p>
+                        <p>前者负责规模，后者负责真相。</p>
+                        
+                        <p>如果你需要，我也可以把这套逻辑</p>
+                        <p>👉 改写成投放 SOP / 内部培训稿 / 给老板的 PPT 结构</p>
+                        <p>直接告诉我你用在什么场景。</p>
+                        
+                        <!-- 社交媒体分享 -->
+                        <div class="social-share">
+                            <span>分享文章：</span>
+                            <a href="#" aria-label="分享到微信"><i class="fa fa-weixin"></i></a>
+                            <a href="#" aria-label="分享到LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" aria-label="分享到Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" aria-label="通过邮件分享"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系表单 -->
+    <section id="contact" class="contact-us section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center wow zoomIn">
+                    <h2>联系我们</h2>
+                    <span></span>
+                </div>
+                <div class="contact" style="background-image: url(../assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                    <!-- 联系表单 -->
+                    <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="name" class="sr-only">姓名</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="姓名" required>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="email" class="sr-only">邮箱</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="邮箱" required>
+                                </div>
+                                <div class="form-group col-md-12 mbnone">
+                                    <label for="message" class="sr-only">您的留言</label>
+                                    <textarea id="message" rows="6" name="message" class="form-control" placeholder="您的留言" required></textarea>
+                                </div>
+
+                                <!-- Honeypot 防垃圾 -->
+                                <div style="display:none;">
+                                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                                </div>
+
+                                <!-- Cloudflare Turnstile 验证 -->
+                                <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAAB2DjWw2W65iSLaN"></div>
+
+                                <div class="col-md-12">
+                                    <div class="actions">
+                                        <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">发送消息</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- 提交反馈消息 -->
+                        <div id="form-status" style="margin-top:15px;"></div>
+                    </div>
+                    
+                    <!-- 联系方式 -->
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <div class="single_address">
+                            <i class="fa fa-rocket color-five"></i>
+                            <h4>我们的位置</h4>
+                            <p>香港、深圳、迈阿密</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="fa fa-phone color-six"></i>
+                            <h4>电话联系</h4>
+                            <p>+(852) 6501 3956</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="fa fa-envelope color-seven"></i>
+                            <h4>发送邮件</h4>
+                            <p>service@graceliu.space</p>
+                        </div>
+                        <div class="single_address single_address_mbnone">
+                            <i class="fa fa-lightbulb-o color-eight"></i>
+                            <h4>工作时间</h4>
+                            <p>周六至周一: 10:00-17:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                    <p class="footer_copyright">Copyright &copy; 2015-2025. Grace Studio</p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                    <div class="footer_social">
+                        <ul>
+                            <li><a class="f_linkedin" href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a class="f_wechat" href="../Carolyn_Wachat.jpg" target="_blank" rel="noopener" aria-label="微信"><i class="fa fa-wechat"></i></a></li>
+                            <li><a class="f_envelope" href="mailto:service@graceliu.space" aria-label="发送邮件"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#" class="back-to-top" aria-label="返回顶部">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <!-- 脚本 -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+    <script src="../assets/js/jquery.stellar.min.js"></script>
+    <script src="../assets/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/jquery.prettyPhoto.js"></script>
+    <script src="../assets/js/scrolltopcontrol.js"></script>
+    <script src="../assets/js/form-contact.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    
+    <!-- 自定义脚本 -->
+    <script>
+        // 表单提交处理
+        document.getElementById("contact-form").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const status = document.getElementById("form-status");
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = "提交中...";
+
+            // 获取 Turnstile token
+            const token = document.querySelector('input[name="cf-turnstile-response"]')?.value;
+            if (!token) {
+                status.innerHTML = "<p style='color:red;'>⚠️ 请先完成验证码验证</p>";
+                submitBtn.disabled = false;
+                submitBtn.innerText = "发送消息";
+                return;
+            }
+
+            let data = new FormData(form);
+            data.append("cf-turnstile-response", token); // 附加 Turnstile token
+
+            try {
+                let response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+                    form.reset();
+                    if (window.turnstile) turnstile.reset(); // 重置验证码
+                } else {
+                    status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+                }
+            } catch (error) {
+                status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.innerText = "发送消息";
+        });
+        
+        // 返回顶部按钮
+        window.addEventListener('scroll', function() {
+            var backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 初始化WOW.js
+        new WOW().init();
+    </script>
+</body>
+</html>
