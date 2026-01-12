@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>2026短视频画质终极指南|Grace Studio海外社媒工作室</title>
+    <meta name="description" content="TikTok/Instagram/YouTube竖屏&横屏导出参数+手机&Pocket 3全工作流解析">
+    <meta name="keywords" content="短视频画质,视频码率,TikTok画质,Instagram清晰度,剪映参数">
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.css">
+    <!--prettyPhoto css-->
+    <link href="../assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /* 全局设置 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* 标题样式 */
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* 段落样式 */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 列表样式 */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
+            font-style: italic;
+            background-color: #f8f9fa;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        
+        /* 新增样式 */
+        .quality-guide {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .quality-problem {
+            background-color: #fff8f8;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .solution-box {
+            background-color: #f0f9ff;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .parameter-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .parameter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .parameter-card h4 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .platform-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .tiktok-icon { color: #000000; }
+        .instagram-icon { color: #E1306C; }
+        .youtube-icon { color: #FF0000; }
+        
+        .param-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .param-table th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .param-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .param-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .workflow-step {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        
+        .step-number {
+            background-color: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .key-point {
+            background: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #3498db;
+        }
+        
+        .key-point h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .device-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .device-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .device-icon {
+            font-size: 28px;
+            margin-right: 15px;
+            color: #3498db;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, 
+        .comparison-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .good-setting {
+            background-color: #d4edda !important;
+        }
+        
+        .bad-setting {
+            background-color: #f8d7da !important;
+        }
+        
+        @media (max-width: 768px) {
+            .workflow-step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .step-number {
+                margin-bottom: 15px;
+            }
+            
+            .param-table, .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-offset="80">
+    <!-- START NAVBAR -->
+    <div id="sticker" class="navbar navbar-default menu-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand"><img src="../assets/img/logo.png" alt="logo"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <nav>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="../index.html">Home</a></li>
+                        <li><a class="page-scroll" href="#post">POST</a></li>
+                        <li><a class="page-scroll" href="https://news.graceliu.space" target="_blank">Blog</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!--- END CONTAINER -->
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- START POSTS TABLE -->
+    <section id="post" class="our_pricing section-padding">
+        <div class="container">
+            <div class="row pricing">
+                <div class="section-title text-center wow zoomIn">
+                    <h1>2026短视频画质终极指南</h1>
+                    <p>TikTok / Instagram / YouTube 竖屏 & 横屏导出参数 + 手机 & Pocket 3 全工作流解析</p>
+                </div>
+                <div class="quality-guide">
+                    <div class="quality-problem">
+                        <h3><i class="fa fa-exclamation-triangle"></i> 你是否遇到过这种情况？</h3>
+                        <p>手机里看视频很清楚，上传到 TikTok / 抖音 / Instagram 后直接糊成一片！</p>
+                        <p>那 90% 的问题不在你的设备，而在参数错位。</p>
+                    </div>
+                    
+                    <p>这篇文章，把平台压缩逻辑、拍摄设备、剪辑导出三件事打通，给你一套 2026 年真实可用的画质工作流。</p>
+                    
+                    <h2>一、为什么你的视频会被平台压糊？</h2>
+                    <p>所有短视频平台都会对你的视频进行二次压缩。如果你给它的源文件码率太低，比如 720P + 1000kbps 以内，平台就只能暴力重压。</p>
+                    
+                    <p>结果就是：</p>
+                    <ul>
+                        <li>人脸糊</li>
+                        <li>文字断层</li>
+                        <li>渐变脏</li>
+                        <li>暗部起块</li>
+                    </ul>
+                    
+                    <div class="solution-box">
+                        <h3><i class="fa fa-lightbulb-o"></i> 解决方案</h3>
+                        <p>你要做的不是"防压缩"，而是：</p>
+                        <ol>
+                            <li>给平台一个足够高质量的源文件</li>
+                            <li>让它只做一次"温柔压缩"</li>
+                        </ol>
+                    </div>
+                    
+                    <h2>二、2026 社媒平台「安全高清导出参数」</h2>
+                    <p>这是基于 TikTok、Instagram、YouTube 实际压缩行为反推的甜点区。</p>
+                    
+                    <h3>📱 竖屏 (9:16)</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th>平台</th>
+                                <th>分辨率</th>
+                                <th>帧率</th>
+                                <th>码率</th>
+                                <th>编码</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa fa-video-camera tiktok-icon"></i> TikTok</td>
+                                <td>1080 × 1920</td>
+                                <td>30 / 60</td>
+                                <td>8000–10000 kbps</td>
+                                <td>H.264</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-instagram instagram-icon"></i> Instagram Reels</td>
+                                <td>1080 × 1920</td>
+                                <td>30</td>
+                                <td>7000–9000 kbps</td>
+                                <td>H.264</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-youtube-play youtube-icon"></i> YouTube Shorts</td>
+                                <td>1080 × 1920</td>
+                                <td>30 / 60</td>
+                                <td>10000–12000 kbps</td>
+                                <td>H.264</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>🖥 横屏 (16:9)</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th>平台</th>
+                                <th>分辨率</th>
+                                <th>帧率</th>
+                                <th>码率</th>
+                                <th>编码</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa fa-video-camera tiktok-icon"></i> TikTok 横屏</td>
+                                <td>1920 × 1080</td>
+                                <td>30</td>
+                                <td>10000 kbps</td>
+                                <td>H.264</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-instagram instagram-icon"></i> Instagram Video</td>
+                                <td>1920 × 1080</td>
+                                <td>30</td>
+                                <td>8000–10000 kbps</td>
+                                <td>H.264</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-youtube-play youtube-icon"></i> YouTube 横屏</td>
+                                <td>1920 × 1080</td>
+                                <td>30 / 60</td>
+                                <td>12000–16000 kbps</td>
+                                <td>H.264</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="key-point">
+                        <p><strong>重要提示：</strong> 如果你用 60fps，码率直接在上限取值。</p>
+                    </div>
+                    
+                    <h2>三、📱 手机拍 + 剪映 的高清工作流</h2>
+                    <p>手机的画面特点是：锐、算法感强、低光容易糊</p>
+                    
+                    <div class="device-section">
+                        <div class="device-header">
+                            <i class="fa fa-mobile device-icon"></i>
+                            <h3>拍摄设置</h3>
+                        </div>
+                        
+                        <div class="parameter-card">
+                            <h4>推荐设置</h4>
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>项目</th>
+                                    <th>建议</th>
+                                    <th>避免</th>
+                                </tr>
+                                <tr>
+                                    <td>分辨率</td>
+                                    <td class="good-setting">1080P 或 4K</td>
+                                    <td class="bad-setting">720P</td>
+                                </tr>
+                                <tr>
+                                    <td>帧率</td>
+                                    <td class="good-setting">30 或 60</td>
+                                    <td class="bad-setting">24 或 120</td>
+                                </tr>
+                                <tr>
+                                    <td>HDR</td>
+                                    <td class="good-setting">关闭</td>
+                                    <td class="bad-setting">开启</td>
+                                </tr>
+                                <tr>
+                                    <td>滤镜</td>
+                                    <td class="good-setting">关闭</td>
+                                    <td class="bad-setting">开启</td>
+                                </tr>
+                                <tr>
+                                    <td>美颜</td>
+                                    <td class="good-setting">关闭</td>
+                                    <td class="bad-setting">开启</td>
+                                </tr>
+                            </table>
+                            <p class="text-muted">HDR 会在剪映和平台之间产生色彩错配。</p>
+                        </div>
+                        
+                        <div class="device-header">
+                            <i class="fa fa-film device-icon"></i>
+                            <h3>剪映时间线</h3>
+                        </div>
+                        
+                        <div class="parameter-card">
+                            <h4>推荐设置</h4>
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>项目</th>
+                                    <th>设置</th>
+                                </tr>
+                                <tr>
+                                    <td>分辨率</td>
+                                    <td>1080 × 1920</td>
+                                </tr>
+                                <tr>
+                                    <td>锐化</td>
+                                    <td>8–12</td>
+                                </tr>
+                                <tr>
+                                    <td>降噪</td>
+                                    <td>0–5</td>
+                                </tr>
+                                <tr>
+                                    <td>清晰</td>
+                                    <td>关闭</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="device-header">
+                            <i class="fa fa-download device-icon"></i>
+                            <h3>剪映导出（手机视频）</h3>
+                        </div>
+                        
+                        <div class="parameter-card">
+                            <h4>推荐设置</h4>
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>项目</th>
+                                    <th>数值</th>
+                                </tr>
+                                <tr>
+                                    <td>分辨率</td>
+                                    <td>1080P</td>
+                                </tr>
+                                <tr>
+                                    <td>帧率</td>
+                                    <td>同拍摄</td>
+                                </tr>
+                                <tr>
+                                    <td>码率</td>
+                                    <td>8000–10000 kbps</td>
+                                </tr>
+                                <tr>
+                                    <td>编码</td>
+                                    <td>H.264</td>
+                                </tr>
+                                <tr>
+                                    <td>高质量导出</td>
+                                    <td>开</td>
+                                </tr>
+                            </table>
+                            <p>这套参数是 TikTok / IG / Shorts 的「平台友好档」。</p>
+                        </div>
+                    </div>
+                    
+                    <h2>四、🎥 DJI Pocket 3 + 剪映 的正确打开方式</h2>
+                    <p>Pocket 3 的画面信息量远高于手机。你用 720P 或 3000kbps 导出，相当于给跑车加了限速器。</p>
+                    
+                    <div class="device-section">
+                        <div class="device-header">
+                            <i class="fa fa-camera device-icon"></i>
+                            <h3>Pocket 3 拍摄</h3>
+                        </div>
+                        
+                        <div class="parameter-card">
+                            <h4>推荐设置</h4>
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>项目</th>
+                                    <th>建议</th>
+                                    <th>注意</th>
+                                </tr>
+                                <tr>
+                                    <td>分辨率</td>
+                                    <td class="good-setting">4K</td>
+                                    <td>避免使用1080P</td>
+                                </tr>
+                                <tr>
+                                    <td>帧率</td>
+                                    <td class="good-setting">30 或 60</td>
+                                    <td>根据内容选择</td>
+                                </tr>
+                                <tr>
+                                    <td>色彩</td>
+                                    <td class="good-setting">Normal</td>
+                                    <td>不要用D-Log</td>
+                                </tr>
+                                <tr>
+                                    <td>防抖</td>
+                                    <td class="good-setting">开</td>
+                                    <td>保持稳定</td>
+                                </tr>
+                            </table>
+                            <p class="text-danger">不要用 D-Log 进剪映，新手会翻车。</p>
+                        </div>
+                        
+                        <div class="device-header">
+                            <i class="fa fa-film device-icon"></i>
+                            <h3>剪映时间线</h3>
+                        </div>
+                        
+                        <div class="parameter-card">
+                            <h4>推荐设置</h4>
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>项目</th>
+                                    <th>设置</th>
+                                </tr>
+                                <tr>
+                                    <td>分辨率</td>
+                                    <td>1080 × 1920</td>
+                                </tr>
+                                <tr>
+                                    <td>锐化</td>
+                                    <td>0–5</td>
+                                </tr>
+                                <tr>
+                                    <td>降噪</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>清晰</td>
+                                    <td>关闭</td>
+                                </tr>
+                            </table>
+                            <p>4K → 1080P 已经是超级采样，不需要再锐化。</p>
+                        </div>
+                        
+                        <div class="device-header">
+                            <i class="fa fa-download device-icon"></i>
+                            <h3>剪映导出（Pocket 3）</h3>
+                        </div>
+                        
+                        <div class="parameter-card">
+                            <h4>推荐设置</h4>
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>项目</th>
+                                    <th>数值</th>
+                                </tr>
+                                <tr>
+                                    <td>分辨率</td>
+                                    <td>1080P</td>
+                                </tr>
+                                <tr>
+                                    <td>帧率</td>
+                                    <td>同拍摄</td>
+                                </tr>
+                                <tr>
+                                    <td>码率</td>
+                                    <td>10000–12000 kbps</td>
+                                </tr>
+                                <tr>
+                                    <td>编码</td>
+                                    <td>H.264</td>
+                                </tr>
+                                <tr>
+                                    <td>高质量导出</td>
+                                    <td>开</td>
+                                </tr>
+                            </table>
+                            <p>这组会让平台识别你的视频为「高质量素材源」。</p>
+                        </div>
+                    </div>
+                    
+                    <h2>五、一个决定你画质命运的认知</h2>
+                    
+                    <div class="key-point">
+                        <h3>不要让平台做第一次压缩</h3>
+                        <p>你要把第一次压缩掌握在自己手里</p>
+                        
+                        <div class="comparison-table">
+                            <table>
+                                <tr>
+                                    <th>你给平台</th>
+                                    <th>平台处理方式</th>
+                                    <th>结果</th>
+                                </tr>
+                                <tr>
+                                    <td>720P 低码率</td>
+                                    <td>当普通视频处理</td>
+                                    <td class="bad-setting">糊、断层、起块</td>
+                                </tr>
+                                <tr>
+                                    <td>1080P 高码率</td>
+                                    <td>走高质量编码通道</td>
+                                    <td class="good-setting">清晰、锐利、流畅</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <p>高质量的源文件是获得优秀画质的基石。遵循本指南的建议，你的视频将能够在各平台上保持最佳画质，无论使用手机还是专业设备拍摄。</p>
+                    </div>
+                    
+                    <div class="solution-box">
+                        <h3><i class="fa fa-check-circle"></i> 关键行动点</h3>
+                        <ol>
+                            <li>立即检查并调整你的拍摄设备设置（分辨率、帧率）</li>
+                            <li>在剪映中按本文参数设置导出选项</li>
+                            <li>上传前，确保源文件码率在安全范围内</li>
+                            <li>定期测试不同平台上的画质表现</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        <!--- END ROW -->
+      </div>
+    <!--- END CONTAINER -->
+  </div>
+<!--- END CONTAINER -->
+</section>
+<!-- END POSTS TABLE -->
+
+<!-- 其他部分保持不变 -->
+<!-- START CONTACT FORM  -->
+<section id="contact" class="contact-us section-padding">
+    <div class="container">
+        <div class="row ">
+            <div class="section-title text-center wow zoomIn">
+                <h2>Get in touch</h2>
+                <span></span>
+            </div>
+            <div class="contact" style="background-image: url(../assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                <!-- web form -->
+                <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <input type="text" name="name" class="form-control" placeholder="Name" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                          <input type="email" name="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group col-md-12 mbnone">
+                          <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                      </div>
+
+                      <!-- Honeypot 防垃圾 -->
+                      <div style="display:none;">
+                          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                      </div>
+
+                      <!-- Cloudflare Turnstile 验证 -->
+                      <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAAB2DjWw2W65iSLaN"></div>
+
+                      <div class="col-md-12">
+                          <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+<!-- 提交反馈消息 -->
+<div id="form-status" style="margin-top:15px;"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+
+  // 获取 Turnstile token
+      const token = document.querySelector('input[name="cf-turnstile-response"]')?.value;
+      if (!token) {
+        status.innerHTML = "<p style='color:red;'>⚠️ 请先完成验证码验证</p>";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send message";
+        return;
+    }
+
+    let data = new FormData(form);
+  data.append("cf-turnstile-response", token); // 附加 Turnstile token
+
+  try {
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+  });
+
+    if (response.ok) {
+      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+      form.reset();
+      if (window.turnstile) turnstile.reset(); // 重置验证码
+  } else {
+      status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+  }
+
+} catch (error) {
+    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+}
+
+submitBtn.disabled = false;
+submitBtn.innerText = "Send message";
+});
+</script>
+
+
+</div>
+<!-- End web form -->
+<!-- END COL -->
+<div class="col-md-5 col-sm-5 col-xs-12">
+    <div class="single_address">
+        <i class="fa fa-rocket color-five"></i>
+        <h4>Our Location</h4>
+
+        <p>Hong Kong、Shenzhen 、Miami</p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-phone color-six"></i>
+        <h4>Call us on</h4>
+
+        <p>+(852) 6501 3956 </p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-envelope color-seven"></i>
+        <h4>Send message</h4>
+
+        <p>service@graceliu.space</p>
+    </div>
+    <div class="single_address single_address_mbnone">
+        <i class="fa fa-lightbulb-o color-eight"></i>
+        <h4>Working Hours</h4>
+
+        <p>Sat-Mon:10.00AM-5.00PM</p>
+    </div>
+</div>
+<!-- END COL -->
+</div>
+<!-- END CONTACT -->
+</div>
+<!-- END ROW -->
+</div>
+<!--- END CONTAINER -->
+</section>
+<!-- END CONTACT FORM -->
+
+<!-- START FOOTER BOTTOM -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <p class="footer_copyright">Copyright &copy; 2015-2025.Grace Studio</p>
+            </div>
+            <!--- END COL -->
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <div class="footer_social">
+                    <ul>
+                        <li><a class="f_linkedin" target="_blank"
+                         href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i
+                         class="fa fa-linkedin"></i></a></li>
+                         <li><a class="f_wechat" target="_blank" href="../Carolyn_Wachat.jpg"><i
+                            class="fa fa-wechat"></i></a></li>
+                            <li><a class="f_envelope" href="mailto:service@graceliu.space"><i
+                                class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </footer>
+<!-- END FOOTER BOTTOM-->
+
+<!-- turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Latest jQuery -->
+<script src="../assets/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizer JS -->
+<script src="../assets/js/modernizr-2.8.3.min.js"></script>
+<!-- stellar js -->
+<script src="../assets/js/jquery.stellar.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="../assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- jquery.prettyPhoto js -->
+<script src="../assets/js/jquery.prettyPhoto.js"></script>
+<!-- scrolltopcontrol js -->
+<script src="../assets/js/scrolltopcontrol.js"></script>
+<!-- form-contact js -->
+<script src="../assets/js/form-contact.js"></script>
+<!-- WOW - Reveal Animations When You Scroll -->
+<script src="../assets/js/wow.min.js"></script>
+<!-- map js -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>--->
+<!-- scripts js -->
+<script src="../assets/js/scripts.js"></script>
+</body>
+</html>
