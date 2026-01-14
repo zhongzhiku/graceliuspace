@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!-- SITE TITLE -->
+<title>文章归档 - Grace Studio出海咨询服务站</title>
+        <meta name="description" content="Grace Studio所有文章归档，包含海外社媒、出海咨询、独立站运营等内容">
+        <meta name="keywords" content="文章归档, 海外社媒, 出海咨询, 独立站运营">
+<!-- Latest Bootstrap min CSS -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">                
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+<!--- owl carousel Css-->
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.css">
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">        
+<!--prettyPhoto css-->
+<link href="assets/css/prettyPhoto.css" rel="stylesheet">                                                   
+<!-- animate CSS -->                
+<link rel="stylesheet" href="assets/css/animate.css">                        
+<!-- Style CSS -->
+<link rel="stylesheet" href="assets/css/style.css">                                
+<link rel="stylesheet" href="assets/css/responsive.css">
+<style>
+    /* 归档页面自定义样式 */
+    .archive-section {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+    }
+    
+    .archive-category {
+        margin-bottom: 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+    
+    .archive-category:hover {
+        transform: translateY(-5px);
+    }
+    
+    .category-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+    }
+    
+    .archive-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .archive-list li {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed #e0e0e0;
+    }
+    
+    .archive-list li:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .archive-list a {
+        display: block;
+        color: #34495e;
+        font-size: 16px;
+        padding: 8px 10px;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    
+    .archive-list a:hover {
+        background: #f1f8ff;
+        color: #2980b9;
+        text-decoration: none;
+        padding-left: 15px;
+    }
+    
+    .archive-search {
+        margin-bottom: 40px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    
+    .article-count {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #7f8c8d;
+    }
+    
+    .no-results {
+        text-align: center;
+        padding: 30px;
+        font-size: 18px;
+        color: #7f8c8d;
+    }
+</style>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+<!-- START PRELOADER
+<div class="preloader">
+        <div class="status">
+                <div class="status-mes"><h4>Grace</h4></div>
+        </div>
+</div>
+-->
+<!-- END PRELOADER -->        
+
+<!-- START HEADER -->
+<header class="header_area">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                                <div class="top-info-left">
+                                        <a href="mailto:service@graceliu.space"><i class="fa fa-envelope"></i>service@graceliu.space</a>
+                                        <a href="https://wa.me/85265013956/?text=Hello!"><i class="fa fa-phone"></i>+(852) 6501 3956</a>
+                                </div>
+                        </div><!--- END COL -->                                                
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                                <div class="top-info-right">
+                                        <ul class="list-unstyled">
+                                                <!--
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                                -->
+                                                <li><a href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="./Carolyn_Wachat.jpg" target="_blank"><i class="fa fa-wechat"></i></a></li>
+                                        </ul>
+                                </div>
+                        </div><!--- END COL -->                                                                          
+                </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+</header>
+<!-- START HEADER -->
+        
+<!-- START NAVBAR -->
+<div id="sticker" class="navbar navbar-default menu-top">
+        <div class="container">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt="logo"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                        <nav>
+                                <ul class="nav navbar-nav navbar-right">
+                                        <li><a class="page-scroll" href="#home">Home</a></li>
+                                        <li><a class="page-scroll" href="#plan">Plan</a></li>
+                                        <li><a class="page-scroll" href="#about">About</a></li>
+                                        <li><a class="page-scroll" href="https://news.graceliu.space" target="_blank">Blog</a></li>
+                                        <li><a class="page-scroll" href="#projects">Projects</a></li>
+                                        <li><a class="page-scroll" href="#service">Service</a></li>        
+                                        <li><a class="page-scroll" href="#team">Team</a></li>
+                                        <li><a class="page-scroll active" href="#archive">Archive</a></li>
+                                        <li><a class="page-scroll" href="#contact">Contact</a></li>
+                                </ul>
+                        </nav>
+                </div> 
+        </div><!--- END CONTAINER -->
+</div> 
+<!-- END NAVBAR -->
+
+<!-- 文章归档部分 -->
+<section id="archive" class="archive-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title wow zoomIn">
+                    <h2>文章归档</h2>
+                    <div></div>
+                    <p class="article-count">共收录 23 篇专业文章</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 搜索区域 -->
+        <div class="row">
+            <div class="col-md-12 archive-search">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control input-lg" placeholder="搜索文章标题或关键词...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary btn-lg" type="button" id="searchButton">
+                            <i class="fa fa-search"></i> 搜索
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 文章分类1：社媒运营 -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="archive-category">
+                    <h3 class="category-title">社媒运营策略</h3>
+                    <ul class="archive-list">
+                        <li><a href="https://graceliu.space/posts/2026海外社媒推广新年计划与业务协同SOP.html">2026海外社媒推广新年计划与业务协同SOP</a></li>
+                        <li><a href="https://graceliu.space/posts/instagram拉粉质量验证方法.html">Instagram拉粉质量验证方法</a></li>
+                        <li><a href="https://graceliu.space/posts/红人推广评估标准.html">红人推广评估标准</a></li>
+                        <li><a href="https://graceliu.space/posts/海外社媒风控检查清单.html">海外社媒风控检查清单</a></li>
+                        <li><a href="https://graceliu.space/posts/TikTok个人号与企业号对比.html">TikTok个人号与企业号对比</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 文章分类2：广告投放 -->
+            <div class="col-md-4">
+                <div class="archive-category">
+                    <h3 class="category-title">广告投放优化</h3>
+                    <ul class="archive-list">
+                        <li><a href="https://graceliu.space/posts/Facebook广告数据分析教程.html">Facebook广告数据分析教程</a></li>
+                        <li><a href="https://graceliu.space/posts/facebook-ctr高无转化解决方案.html">Facebook CTR高无转化解决方案</a></li>
+                        <li><a href="https://graceliu.space/posts/Facebook-CPC优化方法.html">Facebook CPC优化方法</a></li>
+                        <li><a href="https://graceliu.space/posts/LinkedIn广告体系对比解析.html">LinkedIn广告体系对比解析</a></li>
+                        <li><a href="https://graceliu.space/posts/广告SEO联动内容矩阵搭建指南.html">广告SEO联动内容矩阵搭建指南</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 文章分类3：落地页优化 -->
+            <div class="col-md-4">
+                <div class="archive-category">
+                    <h3 class="category-title">落地页优化</h3>
+                    <ul class="archive-list">
+                        <li><a href="https://graceliu.space/posts/Facebook广告落地页优化指南.html">Facebook广告落地页优化指南</a></li>
+                        <li><a href="https://graceliu.space/posts/Facebook广告落地页重要性.html">Facebook广告落地页重要性</a></li>
+                        <li><a href="https://graceliu.space/posts/Facebook落地页与官网首页区别.html">落地页与官网首页区别</a></li>
+                        <li><a href="https://graceliu.space/posts/高转化落地页结构指南.html">高转化落地页结构指南</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行分类 -->
+        <div class="row">
+            <!-- 文章分类4：独立站运营 -->
+            <div class="col-md-4">
+                <div class="archive-category">
+                    <h3 class="category-title">独立站运营</h3>
+                    <ul class="archive-list">
+                        <li><a href="https://graceliu.space/posts/独立站运费设置攻略.html">独立站运费设置攻略</a></li>
+                        <li><a href="https://graceliu.space/posts/跨境独立站邮件营销指南.html">跨境独立站邮件营销指南</a></li>
+                        <li><a href="https://graceliu.space/posts/手机与PC发帖对比.html">手机与PC发帖对比</a></li>
+                        <li><a href="https://graceliu.space/posts/YouTube描述AI提示词.html">YouTube描述AI提示词</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 文章分类5：内容制作 -->
+            <div class="col-md-4">
+                <div class="archive-category">
+                    <h3 class="category-title">内容制作</h3>
+                    <ul class="archive-list">
+                        <li><a href="https://graceliu.space/posts/2026社媒高清视频拍摄参数攻略.html">2026社媒高清视频拍摄参数攻略</a></li>
+                        <li><a href="https://graceliu.space/posts/2026短视频画质终极指南.html">2026短视频画质终极指南</a></li>
+                        <li><a href="https://graceliu.space/posts/英语思维习惯培养.html">英语思维习惯培养</a></li>
+                        <li><a href="https://graceliu.space/posts/sublime-text使用教程.html">Sublime Text使用教程</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 文章分类6：技术工具 -->
+            <div class="col-md-4">
+                <div class="archive-category">
+                    <h3 class="category-title">技术工具</h3>
+                    <ul class="archive-list">
+                        <li><a href="https://graceliu.space/posts/如何减少询盘垃圾广告.html">如何减少询盘垃圾广告</a></li>
+                        <li><a href="https://graceliu.space/posts/优化举例：图片SEO之alt属性.html">图片SEO之alt属性优化</a></li>
+                        <li><a href="https://graceliu.space/posts/建站第一步：独立站怎么选？.html">独立站建站平台选择指南</a></li>
+                        <li><a href="https://graceliu.space/posts/领英获客全流程方案.html">领英获客全流程方案</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- START CONTACT FORM  -->
+<section id="contact" class="contact-us section-padding">
+        <div class="container">
+                <div class="row ">
+                        <div class="section-title text-center wow zoomIn">
+                                <h2>Get in touch</h2>
+                                <span></span>
+                        </div>
+                        <div class="contact" style="background-image: url(assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                                <!-- web form -->
+                                <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                                        <form id="contact-form"  action="https://formspree.io/f/xeolnzlb" method="post">
+                                                <div class="row">
+                                                        <div class="form-group col-md-12">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                            </div>
+                                                        <div class="form-group col-md-12">
+                                                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                                        </div>
+                                                        <div class="form-group col-md-12 mbnone">
+                                                                <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                                                        </div>
+                                                        <!-- 🛡️ Honeypot hidden field -->
+                            <div style="display:none;">
+                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                            </div>
+                                                        <div class="col-md-12">
+                                                                <div class="actions">
+                                                                        <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </form>
+                    <!-- 提交反馈消息 -->
+                    <div id="form-status" style="margin-top:15px;"></div>
+                                        <script>
+                   document.getElementById("contact-form").addEventListener("submit", async function(e) {
+                     e.preventDefault();
+                     const form = e.target;
+                     const status = document.getElementById("form-status");
+                                         const submitBtn = document.getElementById("submitBtn");
+
+                                           // 修改按钮状态
+                       submitBtn.disabled = true;
+                       submitBtn.innerText = "Submitting...";
+                                           
+
+                        let data = new FormData(form);
+                    try {
+                      let response = await fetch(form.action, {
+                        method: form.method,
+                        body: data,
+                       headers: { 'Accept': 'application/json' }
+                     });
+                  if (response.ok) {
+                      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+                      form.reset();
+              } else {
+                     status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+                      }
+             } catch (error) {
+                   status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+                      }
+                                           // 恢复按钮状态
+                     submitBtn.disabled = false;
+                     submitBtn.innerText = "Send message";
+             });
+                  </script>
+
+                                        
+                                        
+                 </div>
+                                <!-- End web form -->
+
+ 
+                                <!-- END COL -->
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <div class="single_address">
+                                                <i class="fa fa-rocket color-five"></i>
+                                                <h4>Our Location</h4>
+                                                <p>Hong Kong、Shenzhen 、Miami </p>
+                                        </div>
+                                        <div class="single_address">
+                                                <i class="fa fa-phone color-six"></i>
+                                                <h4>Call us on</h4>
+                                                <p>+(852) 6501 3956 </p>
+                                        </div>
+                                        <div class="single_address">
+                                                <i class="fa fa-envelope color-seven"></i>
+                                                <h4>Send message</h4>
+                                                <p>service@graceliu.space</p>
+                                        </div>
+                                        <div class="single_address single_address_mbnone">
+                                                <i class="fa fa-lightbulb-o color-eight"></i>
+                                                <h4>Working Hours</h4>
+                                                <p>Sat-Mon: 10.00AM-5.00PM</p>
+                                        </div>
+                                </div><!-- END COL -->
+                        </div><!-- END CONTACT -->
+                </div><!-- END ROW -->
+        </div><!--- END CONTAINER -->        
+</section>
+<!-- END CONTACT FORM -->
+
+<!-- START MAP -->
+        <!---<div id="map"></div>--->
+<!-- END MAP -->
+
+<!-- START FOOTER BOTTOM -->
+<footer class="footer">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                                <p class="footer_copyright">Copyright &copy; 2015-2025.Grace Studio</p>
+                        </div><!--- END COL -->
+                        <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                                <div class="footer_social">
+                                        <ul>
+                                                <!--
+                                                <li><a class="f_facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="f_twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="f_google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a class="f_linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a class="f_youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                                                <li><a class="f_skype" href="#"><i class="fa fa-skype"></i></a></li>
+                                                -->
+                                                <li><a class="f_linkedin" target="_blank" href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a class="f_wechat" target="_blank" href="./Carolyn_Wachat.jpg"><i class="fa fa-wechat"></i></a></li>
+                                                <li><a class="f_envelope" href="mailto:service@graceliu.space"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                </div>                
+                        </div><!--- END COL -->
+                </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+</footer>
+<!-- END FOOTER BOTTOM-->
+
+ 
+<!-- Latest jQuery -->
+        <script src="assets/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizer JS -->                
+        <script src="assets/js/modernizr-2.8.3.min.js"></script>                                                                                                                
+<!-- stellar js -->
+        <script src="assets/js/jquery.stellar.min.js"></script>                                
+<!-- owl-carousel min js  -->
+        <script src="assets/owlcarousel/css/owl.carousel.css"></script>
+        <script src="assets/owlcarousel/css/owl.theme.css"></script>        
+<!-- jquery.prettyPhoto js -->                
+        <script src="assets/js/jquery.prettyPhoto.js"></script>                
+<!-- scrolltopcontrol js -->
+        <script src="assets/js/scrolltopcontrol.js"></script>                                                                        
+<!-- form-contact js -->
+        <script src="assets/js/form-contact.js"></script>        
+<!-- WOW - Reveal Animations When You Scroll -->
+        <script src="assets/js/wow.min.js"></script>
+<!-- map js -->
+        <!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>--->
+<!-- scripts js -->
+        <script src="assets/js/scripts.js"></script>
+        
+        <!-- 归档页面搜索功能 -->
+        <script>
+        $(document).ready(function() {
+            // 初始化WOW.js动画
+            new WOW().init();
+            
+            // 搜索功能
+            $('#searchButton').click(function() {
+                performSearch();
+            });
+            
+            $('#searchInput').keypress(function(e) {
+                if (e.which == 13) { // 回车键
+                    performSearch();
+                }
+            });
+            
+            function performSearch() {
+                var searchTerm = $('#searchInput').val().toLowerCase();
+                
+                if (searchTerm.trim() === '') {
+                    // 清空搜索框，显示所有文章
+                    $('.archive-list li').show();
+                    $('.archive-category').show();
+                    return;
+                }
+                
+                // 隐藏所有文章
+                $('.archive-list li').hide();
+                $('.archive-category').hide();
+                
+                // 显示匹配结果
+                $('.archive-list a').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    if (text.indexOf(searchTerm) !== -1) {
+                        $(this).closest('li').show();
+                        $(this).closest('.archive-category').show();
+                    }
+                });
+                
+                // 如果没有结果，显示提示
+                if ($('.archive-list li:visible').length === 0) {
+                    $('.archive-section .container').append(
+                        '<div class="row"><div class="col-md-12 no-results">' +
+                        '<i class="fa fa-search fa-3x" style="margin-bottom:15px;"></i>' +
+                        '<h4>未找到匹配的文章</h4>' +
+                        '<p>请尝试其他关键词</p></div></div>'
+                    );
+                }
+            }
+        });
+        </script>
+</body>
+</html>
