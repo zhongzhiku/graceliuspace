@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://graceliu.space/posts</loc>
+  </url>
+  <url>
     <loc>https://graceliu.space/posts/英语思维习惯培养.html</loc>
   </url>
   <url>
@@ -65,5 +68,11 @@
   </url>
   <url>
     <loc>https://graceliu.space/posts/LinkedIn广告体系对比解析.html</loc>
+  </url>
+  <url>
+    <loc>https://graceliu.space/posts/海外社媒账号风控降低方法.html</loc>
+  </url>
+  <url>
+    <loc>https://graceliu.space/posts/谷歌广告热门搜索词找词方法.html</loc>
   </url>
 </urlset>
