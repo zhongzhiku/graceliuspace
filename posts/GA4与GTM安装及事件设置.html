@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYBBNFSDT6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CYBBNFSDT6');
+</script>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>GA4已安装后GTM安装教程|事件设置注意事项</title>
+    <meta name="description" content="已安装GA4如何安装GTM及事件设置指南，含情况判断、安装步骤、接管GA4方法及外贸独立站核心事件配置">
+    <meta name="keywords" content="GA4安装GTM,GTM事件设置,GA4事件配置,外贸独立站数据分析,GTM安装教程">
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.css">
+    <!--prettyPhoto css-->
+    <link href="../assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <style>/* 全局设置 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* 标题样式 */
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* 段落样式 */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 列表样式 */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+
+<!-- START NAVBAR -->
+<div id="sticker" class="navbar navbar-default menu-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand"><img src="../assets/img/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="../index.html">Home</a></li>
+                    <li><a class="page-scroll" href="https://graceliu.space/posts">Posts</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--- END CONTAINER -->
+</div>
+<!-- END NAVBAR -->
+
+<!-- START POSTS TABLE -->
+<section class="our_pricing section-padding">
+    <div class="container">
+        <div class="row pricing">
+            <div>
+
+<h1 id="-ga4-gtm-">如果已经安装了GA4该怎么安装GTM，需要注意什么？事件如何设置</h1>
+<p>经常有同学先安装了GA4，由于业务需求又想使用GTM来管理GA4，这个场景<strong>非常常见！</strong></p>
+<p>一句话先给结论：<strong>已经装了 GA4，完全不影响再装 GTM，而且强烈建议用 GTM 来统一管理 GA4。</strong></p>
+<p>下面我按「<strong>最稳妥、不翻车</strong>」的方式给你讲清楚 👇</p>
+<hr>
+<h2 id="-">一、先弄清一个关键点（很重要❗）</h2>
+<h3 id="ga4-gtm-">GA4 和 GTM 的关系是：</h3>
+<ul>
+<li><strong>GA4</strong>：负责“收数据”</li>
+<li><strong>GTM（Google Tag Manager）</strong>：负责“管代码 / 管埋点”</li>
+</ul>
+<p>👉 <strong>GTM 不是 GA4 的替代品</strong>，而是<strong>用 GTM 来部署和管理 GA4</strong></p>
+<hr>
+<h2 id="-">二、情况判断：你现在是哪一种？</h2>
+<p>你说“已经安装了 GA4”，通常有 2 种情况：</p>
+<h3 id="-a-">✅ 情况 A（最常见）</h3>
+<p>你是 <strong>直接把 GA4 的 <code>gtag.js</code> 代码写在网站里</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">window</span>.dataLayer = <span class="hljs-built_in">window</span>.dataLayer || [];
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">gtag</span>(<span class="hljs-params"></span>)</span>{dataLayer.push(<span class="hljs-built_in">arguments</span>);}
+  gtag(<span class="hljs-string">'js'</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+  gtag(<span class="hljs-string">'config'</span>, <span class="hljs-string">'G-XXXXXXX'</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>👉 <strong>推荐做法</strong>：</p>
+<p><strong>装 GTM → 用 GTM 来接管 GA4 → 删除原来的 GA4 代码</strong></p>
+<hr>
+<h3 id="-b">⚠️ 情况 B</h3>
+<p>GA4 <strong>本来就是通过 GTM 装的</strong></p>
+<p>👉 那你其实 <strong>已经装过 GTM 了</strong>，只是你可能没意识到 😄</p>
+<p>（可以在网页源码里搜 <code>GTM-XXXX</code>）</p>
+<hr>
+<h2 id="-gtm-">三、正确安装 GTM 的步骤（通用）</h2>
+<h3 id="step-1-gtm-">Step 1：创建 GTM 容器</h3>
+<ol>
+<li>打开 👉 <a href="https://tagmanager.google.com/">https://tagmanager.google.com</a></li>
+<li>新建账号 / 容器</li>
+<li>容器类型选：<strong>Web</strong></li>
+<li>得到一个 <code>GTM-XXXXXXX</code></li>
+</ol>
+<hr>
+<h3 id="step-2-gtm-">Step 2：把 GTM 代码放进网站</h3>
+<p>GTM 会给你 <strong>两段代码</strong>：</p>
+<h3 id="-head-">① <code>&lt;head&gt;</code> 里（必须）</h3>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- Google Tag Manager --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">w,d,s,l,i</span>)</span>{...})(<span class="hljs-built_in">window</span>,<span class="hljs-built_in">document</span>,<span class="hljs-string">'script'</span>,<span class="hljs-string">'dataLayer'</span>,<span class="hljs-string">'GTM-XXXX'</span>);</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="-body-body-">② <code>&lt;body&gt;</code> 里（紧跟 <code>&lt;body&gt;</code>）</h3>
+<pre><code class="lang-html">&lt;noscript&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.googletagmanager.com/ns.html?id=GTM-XXXX"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span></span>
+</code></pre>
+<p>📌 放好后，<strong>先别急着删 GA4 代码</strong></p>
+<hr>
+<h2 id="-gtm-ga4">四、在 GTM 里“接管”你现有的 GA4</h2>
+<h3 id="step-3-gtm-ga4-">Step 3：在 GTM 中新建 GA4 标签</h3>
+<ol>
+<li>进入 GTM → Tags → New</li>
+<li>选择 <strong>Google Analytics: GA4 Configuration</strong></li>
+<li>填你的 <strong>GA4 Measurement ID</strong>（<code>G-XXXXXXX</code>）</li>
+<li>触发器选：<strong>All Pages</strong></li>
+<li>保存</li>
+</ol>
+<hr>
+<h3 id="step-4-">Step 4：测试（非常关键）</h3>
+<ol>
+<li>GTM 点 <strong>Preview</strong></li>
+<li>打开你的网站</li>
+<li>看是否触发 GA4 Configuration</li>
+<li>同时打开 <strong>GA4 → Realtime</strong></li>
+</ol>
+<p>👉 <strong>能看到实时用户 = 成功</strong></p>
+<hr>
+<h2 id="-ga4-">五、什么时候可以删除原来的 GA4 代码？</h2>
+<p>✅ <strong>当你确认以下 3 点后：</strong></p>
+<ul>
+<li>GTM 预览正常触发</li>
+<li>GA4 实时数据正常</li>
+<li>数据没有断流</li>
+</ul>
+<p>👉 <strong>再删除你网站里原本的 <code>gtag.js</code> GA4 代码</strong></p>
+<p>❗否则会出现：</p>
+<ul>
+<li>重复统计</li>
+<li>数据翻倍</li>
+<li>转化乱套</li>
+</ul>
+<hr>
+<h2 id="-">六、进阶建议（非常适合你这种做海外 + 独立站的）</h2>
+<p>既然你是 <strong>外贸 / 独立站 / 社媒引流</strong>，强烈建议你：</p>
+<h3 id="-gtm-">用 GTM 统一管理这些：</h3>
+<ul>
+<li>GA4 事件（表单提交、WhatsApp 点击、Email 点击）</li>
+<li>Facebook Pixel</li>
+<li>Google Ads 转化</li>
+<li>TikTok Pixel</li>
+<li>Hotjar / Clarity</li>
+</ul>
+<p>👉 <strong>以后再也不用改网站代码，只改 GTM</strong></p>
+<hr>
+<h2 id="-">七、快速自检清单 ✅</h2>
+<p>你可以直接对照：</p>
+<ul>
+<li>[ ]  网站源码里只有 <strong>GTM-XXXX</strong></li>
+<li>[ ]  没有单独的 <code>G-XXXX</code> GA4 代码</li>
+<li>[ ]  GA4 是通过 GTM 触发</li>
+<li>[ ]  GA4 实时有数据</li>
+</ul>
+<hr>
+<h1 id="-">事件设置</h1>
+<p>这一步基本就是 <strong>“把外贸独立站的数据骨架搭起来”</strong> 💪</p>
+<p>下面按 <strong>WordPress + Elementor + GTM + GA4</strong>， <strong>【每个核心事件 = 触发器怎么配】的实操清单</strong>。</p>
+<p>👉 全是 <strong>GTM 层面的操作，不改 WP 代码</strong>。</p>
+<hr>
+<h1 id="-gtm-">一、总览：你在 GTM 里最终会有这些触发器</h1>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>触发器类型</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>form_submit</code></td>
+<td>Custom Event</td>
+<td>询盘 / 报价 / 联系</td>
+</tr>
+<tr>
+<td><code>whatsapp_click</code></td>
+<td>Click – Just Links</td>
+<td>外贸核心转化</td>
+</tr>
+<tr>
+<td><code>email_click</code></td>
+<td>Click – Just Links</td>
+<td>邮件询盘</td>
+</tr>
+<tr>
+<td><code>phone_click</code></td>
+<td>Click – Just Links</td>
+<td>电话联系</td>
+</tr>
+<tr>
+<td><code>cta_click</code></td>
+<td>Click – All Elements</td>
+<td>Get Quote / Contact</td>
+</tr>
+<tr>
+<td><code>file_download</code></td>
+<td>Click – Just Links</td>
+<td>目录 / 规格书</td>
+</tr>
+<tr>
+<td><code>product_view</code></td>
+<td>Page View</td>
+<td>重点产品页</td>
+</tr>
+<tr>
+<td><code>key_page_view</code></td>
+<td>Page View</td>
+<td>About / Factory</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="-">二、前置必做（一次性）</h1>
+<h2 id="1-">1️⃣ 启用内置变量</h2>
+<p>GTM → <strong>Variables → Configure</strong>，勾选：</p>
+<p><strong>页面类</strong></p>
+<ul>
+<li>Page Path</li>
+<li>Page URL</li>
+<li>Page Title</li>
+</ul>
+<p><strong>点击类</strong></p>
+<ul>
+<li>Click URL</li>
+<li>Click Text</li>
+<li>Click Classes</li>
+<li>Click ID</li>
+</ul>
+<hr>
+<h1 id="-">三、逐个事件的【触发器配置步骤】</h1>
+<hr>
+<h2 id="-1-elementor-">🔥 1️⃣ 表单提交（Elementor 弹窗 &amp; 页面通用）</h2>
+<h3 id="trigger-custom-event">Trigger：Custom Event</h3>
+<ul>
+<li>Type：<strong>Custom Event</strong></li>
+<li>Event name：</li>
+</ul>
+<pre><code>elementor<span class="hljs-regexp">/forms/</span>submit
+</code></pre><ul>
+<li>Condition：All Custom Events</li>
+</ul>
+<p>📌 <strong>这是 Elementor 官方事件，最稳</strong></p>
+<p>👉 对应 GA4 Event：<code>form_submit</code></p>
+<hr>
+<h2 id="-2-whatsapp-">🔥 2️⃣ WhatsApp 点击（外贸最重要）</h2>
+<h3 id="trigger-click-just-links">Trigger：Click – Just Links</h3>
+<ul>
+<li>Trigger fires on：<strong>Some Link Clicks</strong></li>
+<li>条件（任选一个即可）：</li>
+</ul>
+<pre><code>Click URL <span class="hljs-keyword">contains</span> wa.<span class="hljs-keyword">me</span>
+</code></pre><p>或</p>
+<pre><code>Click <span class="hljs-built_in">URL</span> <span class="hljs-keyword">contains</span> whatsapp
+</code></pre><p>📌 兼容：</p>
+<ul>
+<li>悬浮按钮</li>
+<li>弹窗按钮</li>
+<li>页内按钮</li>
+</ul>
+<p>👉 GA4 Event：<code>whatsapp_click</code></p>
+<hr>
+<h2 id="-3-email-">🔥 3️⃣ Email 点击</h2>
+<h3 id="trigger-click-just-links">Trigger：Click – Just Links</h3>
+<ul>
+<li>Trigger fires on：Some Link Clicks</li>
+<li>条件：</li>
+</ul>
+<pre><code>Click <span class="hljs-built_in">URL</span> starts <span class="hljs-keyword">with</span> mailto:
+</code></pre><p>👉 GA4 Event：<code>email_click</code></p>
+<hr>
+<h2 id="-4-">🔥 4️⃣ 电话点击（可选）</h2>
+<h3 id="trigger-click-just-links">Trigger：Click – Just Links</h3>
+<ul>
+<li>条件：</li>
+</ul>
+<pre><code>Click <span class="hljs-built_in">URL</span> starts <span class="hljs-keyword">with</span> tel:
+</code></pre><p>👉 GA4 Event：<code>phone_click</code></p>
+<hr>
+<h2 id="-5-cta-get-quote-contact-">🔥 5️⃣ CTA 按钮点击（Get Quote / Contact）</h2>
+<h3 id="trigger-click-all-elements">Trigger：Click – All Elements</h3>
+<ul>
+<li>Trigger fires on：Some Clicks</li>
+<li>条件（推荐用文本）：</li>
+</ul>
+<pre><code>Click <span class="hljs-keyword">Text</span> contains <span class="hljs-keyword">Get</span> Quote
+</code></pre><p>或多语言：</p>
+<pre><code>Click Text matches RegEx (?i)get <span class="hljs-built_in">quote</span>|<span class="hljs-type">contact</span>|<span class="hljs-type">inquiry</span>
+</code></pre><p>👉 GA4 Event：<code>cta_click</code></p>
+<hr>
+<h2 id="-6-pdf-catalog-">🔥 6️⃣ 文件下载（PDF / Catalog）</h2>
+<h3 id="trigger-click-just-links">Trigger：Click – Just Links</h3>
+<ul>
+<li>条件：</li>
+</ul>
+<pre><code>Click URL matches RegEx \.(pdf|<span class="hljs-type">docx</span>|<span class="hljs-type">xlsx</span>)$
+</code></pre><p>👉 GA4 Event：<code>file_download</code></p>
+<hr>
+<h2 id="-7-">🔥 7️⃣ 产品页浏览（重点产品）</h2>
+<h3 id="trigger-page-view">Trigger：Page View</h3>
+<ul>
+<li>Trigger fires on：Some Page Views</li>
+<li>条件：</li>
+</ul>
+<pre><code>Page Path <span class="hljs-keyword">contains</span> /<span class="hljs-built_in">product</span>/
+</code></pre><p>（或你实际的产品目录）</p>
+<p>👉 GA4 Event：<code>product_view</code></p>
+<hr>
+<h2 id="-8-about-factory-">🔥 8️⃣ 关键页面浏览（About / Factory）</h2>
+<h3 id="trigger-page-view">Trigger：Page View</h3>
+<ul>
+<li>条件：</li>
+</ul>
+<pre><code>Page <span class="hljs-keyword">Path</span> matches RegEx about|<span class="hljs-type">factory</span>|<span class="hljs-type">custom</span>
+</code></pre><p>👉 GA4 Event：<code>key_page_view</code></p>
+<hr>
+<h1 id="-ga4-event-tag-">四、GA4 Event Tag 通用配置模板（直接套）</h1>
+<p>每个事件只改 <strong>Event Name + 参数</strong>：</p>
+<pre><code>Event Name: whatsapp_click
+Parameters:
+- page_path: {{Page Path}}
+- page_title: {{Page Title}}
+- click_url: {{Click URL}}
+</code></pre><p>📌 这样你在 GA4 里能清楚看到 <strong>点了什么、在哪点的</strong></p>
+<hr>
+<h1 id="-">五、测试顺序（一定照这个）</h1>
+<p>1️⃣ GTM → Preview</p>
+<p>2️⃣ 点 WhatsApp / 提交表单 / 下载文件</p>
+<p>3️⃣ 看对应 Tag 是否触发</p>
+<p>4️⃣ GA4 → Realtime 确认事件</p>
+<p>❗没通过不要发布</p>
+<hr>
+<h1 id="-3-">六、外贸站 3 个“只要做了就赢”的事件 🔥</h1>
+<p>如果你时间有限，<strong>至少先完成这 3 个</strong>：</p>
+<ol>
+<li><code>form_submit</code></li>
+<li><code>whatsapp_click</code></li>
+<li><code>file_download</code></li>
+</ol>
+<p>👉 这三个能直接判断：</p>
+<ul>
+<li>哪个渠道带来 <strong>真询盘</strong></li>
+<li>哪个页面在 <strong>浪费流量</strong></li>
+</ul>
+<hr>
+<h2 id="-">下一步可以继续：</h2>
+<ul>
+<li>🔹 <strong>每个事件的 GA4 参数怎么设计才利于看来源</strong></li>
+<li>🔹 <strong>GA4 探索报告模板（外贸询盘版）</strong></li>
+<li>🔹 <strong>把 FB / Google Ads 转化和 GA4 对齐</strong></li>
+</ul>
+           </div>
+      </div>
+    <!--- END ROW -->
+  </div>
+<!--- END CONTAINER -->
+</section>
+<!-- END POSTS TABLE -->
+
+
+<!-- START CONTACT FORM  -->
+<section id="contact" class="contact-us section-padding">
+    <div class="container">
+        <div class="row ">
+            <div class="section-title text-center wow zoomIn">
+                <h2>Get in touch</h2>
+                <span></span>
+            </div>
+            <div class="contact" style="background-image: url(../assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                <!-- web form -->
+                <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <input type="text" name="name" class="form-control" placeholder="Name" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                          <input type="email" name="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group col-md-12 mbnone">
+                          <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                      </div>
+
+                      <!-- Honeypot 防垃圾 -->
+                      <div style="display:none;">
+                          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                      </div>
+
+                      <!-- Cloudflare Turnstile 验证 -->
+                      <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAAB2DjWw2W65iSLaN"></div>
+
+                      <div class="col-md-12">
+                          <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+<!-- 提交反馈消息 -->
+<div id="form-status" style="margin-top:15px;"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+
+  // 获取 Turnstile token
+      const token = document.querySelector('input[name="cf-turnstile-response"]')?.value;
+      if (!token) {
+        status.innerHTML = "<p style='color:red;'>⚠️ 请先完成验证码验证</p>";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send message";
+        return;
+    }
+
+    let data = new FormData(form);
+  data.append("cf-turnstile-response", token); // 附加 Turnstile token
+
+  try {
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+  });
+
+    if (response.ok) {
+      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+      form.reset();
+      if (window.turnstile) turnstile.reset(); // 重置验证码
+  } else {
+      status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+  }
+
+} catch (error) {
+    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+}
+
+submitBtn.disabled = false;
+submitBtn.innerText = "Send message";
+});
+</script>
+
+
+</div>
+<!-- End web form -->
+<!-- END COL -->
+<div class="col-md-5 col-sm-5 col-xs-12">
+    <div class="single_address">
+        <i class="fa fa-rocket color-five"></i>
+        <h4>Our Location</h4>
+
+        <p>Hong Kong、Shenzhen 、Miami</p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-phone color-six"></i>
+        <h4>Call us on</h4>
+
+        <p>+(852) 6501 3956 </p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-envelope color-seven"></i>
+        <h4>Send message</h4>
+
+        <p>service@graceliu.space</p>
+    </div>
+    <div class="single_address single_address_mbnone">
+        <i class="fa fa-lightbulb-o color-eight"></i>
+        <h4>Working Hours</h4>
+
+        <p>Sat-Mon:10.00AM-5.00PM</p>
+    </div>
+</div>
+<!-- END COL -->
+</div>
+<!-- END CONTACT -->
+</div>
+<!-- END ROW -->
+</div>
+<!--- END CONTAINER -->
+</section>
+<!-- END CONTACT FORM -->
+
+<!-- START MAP -->
+<!---<div id="map"></div>--->
+<!-- END MAP -->
+
+<!-- START FOOTER BOTTOM -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <p class="footer_copyright">Copyright &copy; 2015-2025.Grace Studio</p>
+            </div>
+            <!--- END COL -->
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <div class="footer_social">
+                    <ul>
+                        <li><a class="f_linkedin" target="_blank"
+                         href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i
+                         class="fa fa-linkedin"></i></a></li>
+                         <li><a class="f_wechat" target="_blank" href="../Carolyn_Wachat.jpg"><i
+                            class="fa fa-wechat"></i></a></li>
+                            <li><a class="f_envelope" href="mailto:service@graceliu.space"><i
+                                class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </footer>
+<!-- END FOOTER BOTTOM-->
+
+<!-- turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Latest jQuery -->
+<script src="../assets/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizer JS -->
+<script src="../assets/js/modernizr-2.8.3.min.js"></script>
+<!-- stellar js -->
+<script src="../assets/js/jquery.stellar.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="../assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- jquery.prettyPhoto js -->
+<script src="../assets/js/jquery.prettyPhoto.js"></script>
+<!-- scrolltopcontrol js -->
+<script src="../assets/js/scrolltopcontrol.js"></script>
+<!-- form-contact js -->
+<script src="../assets/js/form-contact.js"></script>
+<!-- WOW - Reveal Animations When You Scroll -->
+<script src="../assets/js/wow.min.js"></script>
+<!-- map js -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>--->
+<!-- scripts js -->
+<script src="../assets/js/scripts.js"></script>
+</body>
+</html>
