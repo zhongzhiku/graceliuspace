@@ -1,3 +1,6 @@
+以下是替换TDK后的完整HTML代码，已将标题、描述和关键词更新为新文章的内容：
+
+```html
 <!DOCTYPE html>
 <html lang="zh">
 
@@ -17,9 +20,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- SITE TITLE -->
-    <title>Facebook Lead Ads 自动化进阶：Zapier实现Google Sheets邮件实时提醒</title>
-    <meta name="description" content="Facebook Lead Ads自动化进阶教程，通过Zapier实现Google Sheets到邮件的实时提醒，无需紧盯表格，新线索即时通知，提升跟进效率">
-    <meta name="keywords" content="Facebook Lead Ads, Zapier, Google Sheets, 邮件实时提醒, 线索自动化">
+    <title>Facebook Lead Ads自动化：Zapier实现Google Sheets邮件实时提醒</title>
+    <meta name="description" content="Facebook Lead Ads自动化进阶教程，通过Zapier实现Google Sheets新线索邮件实时提醒，提升线索跟进效率">
+    <meta name="keywords" content="Facebook Lead Ads, Zapier教程, Google Sheets自动化, 邮件实时提醒, 线索管理">
     <!-- Latest Bootstrap min CSS -->
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <!-- Google Font -->
@@ -138,78 +141,99 @@
         <div class="row pricing">
             <div>
 <h1 id="facebook-lead-ads-zapier-google-sheets-">Facebook Lead Ads 自动化进阶：用 Zapier 实现 Google Sheets → 邮件实时提醒</h1>
-<p>线索跟进慢=白投钱。用 Zapier 配置实时邮件提醒，确保新线索 5 分钟内触达销售。  </p>
-<h2 id="-">一、整体逻辑说明</h2>
-<p>完整自动化路径：<strong>Facebook Lead Ads → Google Sheets → Zapier → Email 通知</strong><br>选择 <strong>Google Sheets 作为中转</strong>而非 FB 直连，核心优势见后文说明。  </p>
-<h2 id="-zap">二、创建/编辑 Zap</h2>
+<p>（排版乱=逻辑烂？放心，这篇让你一眼看清全流程）  </p>
+<h2 id="-">一、整体逻辑说明（先搞清楚链路）</h2>
+<blockquote>
+<p><strong><code>Facebook Lead Ads → Google Sheets → Zapier → Email 通知</code></strong>  </p>
+</blockquote>
+<p>为什么非要用 Google Sheets 中转？文末给你三个不得不这么做的理由。  </p>
+<h2 id="-zapier-zap">二、第一步：在 Zapier 中创建或编辑 Zap</h2>
 <h3 id="1-zap-">1️⃣ 进入 Zap 编辑器</h3>
-<p>登录 Zapier 账号 → 新建或编辑现有 Zap。  </p>
+<ul>
+<li>登录 Zapier 账号  </li>
+<li>新建一个 Zap，或编辑你现有的 Zap  </li>
+</ul>
 <h3 id="2-trigger-">2️⃣ 设置 Trigger（触发器）</h3>
 <ul>
 <li><strong>Trigger App</strong>：选择 <strong>Google Sheets</strong>  </li>
-<li><strong>Trigger Event</strong>：选择 <strong>New Spreadsheet Row</strong>（新增行时触发）  </li>
-<li><strong>表格选择</strong>：必须匹配 FB Lead Ads 绑定的 Google 表格及目标工作表（Worksheet），否则会出现“触发但无数据”。  </li>
+<li><strong>Trigger Event</strong>：选择 <strong>New Spreadsheet Row</strong>（表格新增行时触发）  </li>
+<li><strong>表格选择</strong>：  <ul>
+<li>选你之前绑定 FB Lead Ads 的 Google 表格  </li>
+<li>工作表（Worksheet）必须选实际存线索的 Sheet（⚠️ 选错就会触发了但没数据）  </li>
 </ul>
-<h2 id="-action-">三、添加 Action（执行动作）</h2>
-<h3 id="1-">1️⃣ 添加新步骤</h3>
-<p>点击 <strong>“+”</strong> → 选择 <strong>Email by Zapier</strong>（免费、无需额外授权）或 <strong>Gmail/Outlook</strong>（适合指定发件人）。  </p>
-<h3 id="2-event">2️⃣ 设置 Event</h3>
-<p>选择 <strong>Send Outbound Email</strong>。  </p>
-<h2 id="-customize-email-">四、配置邮件内容（Customize Email）</h2>
-<h3 id="1-to-">1️⃣ To（收件人）</h3>
-<p>填写个人或团队邮箱（支持多邮箱逗号分隔）。  </p>
-<h3 id="2-subject-">2️⃣ Subject（邮件标题）</h3>
-<p>建议格式：<strong>🔥 New Facebook Lead: {{Name}}</strong><br><code>{{Name}}</code> 为 Google Sheets 动态字段。  </p>
-<h3 id="3-body-">3️⃣ Body（邮件正文）</h3>
-<p>模板参考：  </p>
-<pre><code>New Facebook Lead Ads Submission:  
-Name: {{Name}}  
-Phone: {{Phone}}  
-Email: {{Email}}  
-Submitted Time: {{Timestamp}}  
-Action Required: Follow up ASAP.
-</code></pre><p>所有 <code>{{字段名}}</code> 需与 Google Sheets 列名完全一致。  </p>
-<h2 id="-zap">五、测试并发布 Zap</h2>
-<h3 id="1-test-step">1️⃣ Test Step</h3>
-<p>点击 <strong>Test</strong> → 检查邮箱是否收到测试邮件，确认字段映射无误。  </p>
-<h3 id="2-publish">2️⃣ Publish</h3>
-<p>测试通过后点击 <strong>Publish</strong>，Zap 正式运行。此后新线索将自动触发邮件提醒。  </p>
-<h2 id="-google-sheets-">六、为什么用 Google Sheets 中转？</h2>
-<table>
-<thead>
-<tr>
-<th>优势</th>
-<th>具体说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>双重备份</td>
-<td>Google Sheets 长期留存数据，Email 即时提醒，避免漏看邮件导致线索丢失</td>
-</tr>
-<tr>
-<td>稳定性更高</td>
-<td>减少 FB 直连第三方工具的权限失效、Invalid URL 等问题，排错更直观</td>
-</tr>
-<tr>
-<td>节省 Zap 额度</td>
-<td>免费版 Zapier 任务数有限，表格触发更易控制消耗</td>
-</tr>
-</tbody>
-</table>
-<h2 id="-">七、权限问题排查</h2>
-<p>配置时若提示权限异常，重点检查：  </p>
+</li>
+</ul>
+<h2 id="-action-">三、第二步：添加 Action（执行动作）</h2>
+<h3 id="1-action-">1️⃣ 添加新步骤（Action）</h3>
+<p>点击 <strong>“+”</strong> 添加下一步：  </p>
 <ul>
-<li>是否出现 <strong>“Zapier wants additional access”</strong> 页面  </li>
-<li>是否勾选 <strong>“Select all”</strong>  </li>
-<li>Gmail 用户需确保开启 <strong>Read / Compose / Send Email</strong> 权限  </li>
+<li><strong>App 选择</strong>：  <ul>
+<li>推荐 <strong>Email by Zapier</strong>（免费、自带、无需额外授权）  </li>
+<li>或选 <strong>Gmail / Outlook</strong>（适合需要指定发件人账号的团队）  </li>
 </ul>
-<h3 id="-">💡 避坑私房话</h3>
+</li>
+</ul>
+<h3 id="2-event">2️⃣ 设置 Event</h3>
+<ul>
+<li><strong>Event</strong>：选择 <strong>Send Outbound Email</strong>  </li>
+</ul>
+<h2 id="-customize-email-">四、第三步：配置邮件内容（Customize Email）</h2>
+<p>（这步最关键，目标：把线索信息完整、清晰塞进邮件）  </p>
+<h3 id="1-to-">1️⃣ To（收件人）</h3>
+<ul>
+<li>填你的个人邮箱或销售团队邮箱  </li>
+</ul>
+<h3 id="2-subject-">2️⃣ Subject（邮件标题）</h3>
+<p>建议一眼看出是新线索，例如：<br><code>🔥 新 Facebook 线索：{{Name}}</code><br>（<code>{{Name}}</code> 会从 Google Sheets 动态抓取客户姓名）  </p>
+<h3 id="3-body-">3️⃣ Body（邮件正文）</h3>
+<p>按模板写，变量字段来自表格列名：  </p>
+<pre><code>收到新的 Facebook Lead Ads 线索：  
+客户姓名：{{Name}}  
+电话：{{Phone}}  
+邮箱：{{Email}}  
+提交时间：{{Timestamp}}  
+请尽快跟进。
+</code></pre><h2 id="-zap">五、第四步：测试并发布 Zap</h2>
+<h3 id="1-test-step">1️⃣ Test Step</h3>
+<ul>
+<li>点击 <strong>Test</strong>  </li>
+<li>检查邮箱是否收到测试邮件  </li>
+<li>确认字段映射正确  </li>
+</ul>
+<h3 id="2-publish">2️⃣ Publish</h3>
+<ul>
+<li>测试无误后点击 <strong>Publish</strong>  </li>
+<li>从此每来一条新线索，自动发一封邮件  </li>
+</ul>
+<h2 id="-google-sheets-zapier-email-">六、为什么建议 Google Sheets → Zapier → Email？</h2>
+<blockquote>
+<p>为什么不直接 Facebook → Email？  </p>
+</blockquote>
+<p><strong>答案：尽量不要直连。</strong> 三个核心原因：  </p>
 <ol>
-<li><strong>字段映射必校</strong>：测试邮件中若出现 <code>{{Name}}</code> 而非实际姓名，检查表格列名是否与 Zap 配置完全一致（区分大小写）。  </li>
-<li><strong>工作表别选错</strong>：FB 可能默认写入“Form Responses 1”而非自定义工作表，需手动指定正确 Sheet。  </li>
-<li><strong>免费版限额预警</strong>：Zapier 免费版每月 100 任务，建议用 <strong>Filter</strong> 步骤过滤测试数据，避免无效触发消耗额度。</li>
+<li><p><strong>双重备份更安全</strong>  </p>
+<ul>
+<li>Google Sheets 长期留存数据，Email 即时提醒  </li>
+<li>漏看邮件也不怕丢线索  </li>
+</ul>
+</li>
+<li><p><strong>稳定性更高</strong>  </p>
+<ul>
+<li>直连 FB 容易遇到权限失效、Invalid URL、授权断开  </li>
+<li>表格中转数据流透明，排查问题更方便  </li>
+</ul>
+</li>
+<li><p><strong>Zapier 免费额度更友好</strong>  </p>
+<ul>
+<li>免费版有任务数限制，通过表格触发更容易控制消耗  </li>
+</ul>
+</li>
 </ol>
+<h3 id="-grace-">💡 Grace 的避坑私房话</h3>
+<ul>
+<li><strong>权限问题别踩坑</strong>：配置时若提示权限异常，检查是否看到 <strong>“Zapier wants additional access”</strong> 页面，必须 <strong>勾选 “Select all”</strong>。用 Gmail 的话，要允许 <strong>Read / Compose / Send Email</strong> 权限（权限不全是邮件不发送的最常见原因）。  </li>
+<li><strong>自动化的意义</strong>：FB 线索的价值不在于数量，而在于谁能更快联系客户。搭好这条链路，你就赢在起跑线了。</li>
+</ul>
 
 
 
