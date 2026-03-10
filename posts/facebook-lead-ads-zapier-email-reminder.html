@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYBBNFSDT6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CYBBNFSDT6');
+</script>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>Facebook Lead Ads 自动化进阶：Zapier实现Google Sheets邮件实时提醒</title>
+    <meta name="description" content="Facebook Lead Ads自动化进阶教程，通过Zapier实现Google Sheets到邮件的实时提醒，无需紧盯表格，新线索即时通知，提升跟进效率">
+    <meta name="keywords" content="Facebook Lead Ads, Zapier, Google Sheets, 邮件实时提醒, 线索自动化">
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.css">
+    <!--prettyPhoto css-->
+    <link href="../assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <style>/* 全局设置 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* 标题样式 */
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* 段落样式 */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 列表样式 */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+
+<!-- START NAVBAR -->
+<div id="sticker" class="navbar navbar-default menu-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand"><img src="../assets/img/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="../index.html">Home</a></li>
+                    <li><a class="page-scroll" href="https://graceliu.space/posts">Posts</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--- END CONTAINER -->
+</div>
+<!-- END NAVBAR -->
+
+<!-- START POSTS TABLE -->
+<section class="our_pricing section-padding">
+    <div class="container">
+        <div class="row pricing">
+            <div>
+<h1 id="facebook-lead-ads-zapier-google-sheets-">Facebook Lead Ads 自动化进阶：用 Zapier 实现 Google Sheets → 邮件实时提醒</h1>
+<p>线索跟进慢=白投钱。用 Zapier 配置实时邮件提醒，确保新线索 5 分钟内触达销售。  </p>
+<h2 id="-">一、整体逻辑说明</h2>
+<p>完整自动化路径：<strong>Facebook Lead Ads → Google Sheets → Zapier → Email 通知</strong><br>选择 <strong>Google Sheets 作为中转</strong>而非 FB 直连，核心优势见后文说明。  </p>
+<h2 id="-zap">二、创建/编辑 Zap</h2>
+<h3 id="1-zap-">1️⃣ 进入 Zap 编辑器</h3>
+<p>登录 Zapier 账号 → 新建或编辑现有 Zap。  </p>
+<h3 id="2-trigger-">2️⃣ 设置 Trigger（触发器）</h3>
+<ul>
+<li><strong>Trigger App</strong>：选择 <strong>Google Sheets</strong>  </li>
+<li><strong>Trigger Event</strong>：选择 <strong>New Spreadsheet Row</strong>（新增行时触发）  </li>
+<li><strong>表格选择</strong>：必须匹配 FB Lead Ads 绑定的 Google 表格及目标工作表（Worksheet），否则会出现“触发但无数据”。  </li>
+</ul>
+<h2 id="-action-">三、添加 Action（执行动作）</h2>
+<h3 id="1-">1️⃣ 添加新步骤</h3>
+<p>点击 <strong>“+”</strong> → 选择 <strong>Email by Zapier</strong>（免费、无需额外授权）或 <strong>Gmail/Outlook</strong>（适合指定发件人）。  </p>
+<h3 id="2-event">2️⃣ 设置 Event</h3>
+<p>选择 <strong>Send Outbound Email</strong>。  </p>
+<h2 id="-customize-email-">四、配置邮件内容（Customize Email）</h2>
+<h3 id="1-to-">1️⃣ To（收件人）</h3>
+<p>填写个人或团队邮箱（支持多邮箱逗号分隔）。  </p>
+<h3 id="2-subject-">2️⃣ Subject（邮件标题）</h3>
+<p>建议格式：<strong>🔥 New Facebook Lead: {{Name}}</strong><br><code>{{Name}}</code> 为 Google Sheets 动态字段。  </p>
+<h3 id="3-body-">3️⃣ Body（邮件正文）</h3>
+<p>模板参考：  </p>
+<pre><code>New Facebook Lead Ads Submission:  
+Name: {{Name}}  
+Phone: {{Phone}}  
+Email: {{Email}}  
+Submitted Time: {{Timestamp}}  
+Action Required: Follow up ASAP.
+</code></pre><p>所有 <code>{{字段名}}</code> 需与 Google Sheets 列名完全一致。  </p>
+<h2 id="-zap">五、测试并发布 Zap</h2>
+<h3 id="1-test-step">1️⃣ Test Step</h3>
+<p>点击 <strong>Test</strong> → 检查邮箱是否收到测试邮件，确认字段映射无误。  </p>
+<h3 id="2-publish">2️⃣ Publish</h3>
+<p>测试通过后点击 <strong>Publish</strong>，Zap 正式运行。此后新线索将自动触发邮件提醒。  </p>
+<h2 id="-google-sheets-">六、为什么用 Google Sheets 中转？</h2>
+<table>
+<thead>
+<tr>
+<th>优势</th>
+<th>具体说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>双重备份</td>
+<td>Google Sheets 长期留存数据，Email 即时提醒，避免漏看邮件导致线索丢失</td>
+</tr>
+<tr>
+<td>稳定性更高</td>
+<td>减少 FB 直连第三方工具的权限失效、Invalid URL 等问题，排错更直观</td>
+</tr>
+<tr>
+<td>节省 Zap 额度</td>
+<td>免费版 Zapier 任务数有限，表格触发更易控制消耗</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">七、权限问题排查</h2>
+<p>配置时若提示权限异常，重点检查：  </p>
+<ul>
+<li>是否出现 <strong>“Zapier wants additional access”</strong> 页面  </li>
+<li>是否勾选 <strong>“Select all”</strong>  </li>
+<li>Gmail 用户需确保开启 <strong>Read / Compose / Send Email</strong> 权限  </li>
+</ul>
+<h3 id="-">💡 避坑私房话</h3>
+<ol>
+<li><strong>字段映射必校</strong>：测试邮件中若出现 <code>{{Name}}</code> 而非实际姓名，检查表格列名是否与 Zap 配置完全一致（区分大小写）。  </li>
+<li><strong>工作表别选错</strong>：FB 可能默认写入“Form Responses 1”而非自定义工作表，需手动指定正确 Sheet。  </li>
+<li><strong>免费版限额预警</strong>：Zapier 免费版每月 100 任务，建议用 <strong>Filter</strong> 步骤过滤测试数据，避免无效触发消耗额度。</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+           </div>
+      </div>
+    <!--- END ROW -->
+  </div>
+<!--- END CONTAINER -->
+</section>
+<!-- END POSTS TABLE -->
+
+
+<!-- START CONTACT FORM  -->
+<section id="contact" class="contact-us section-padding">
+    <div class="container">
+        <div class="row ">
+            <div class="section-title text-center wow zoomIn">
+                <h2>Get in touch</h2>
+                <span></span>
+            </div>
+            <div class="contact" style="background-image: url(../assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                <!-- web form -->
+                <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <input type="text" name="name" class="form-control" placeholder="Name" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                          <input type="email" name="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group col-md-12 mbnone">
+                          <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                      </div>
+
+                      <!-- Honeypot 防垃圾 -->
+                      <div style="display:none;">
+                          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                      </div>
+
+                      <!-- Cloudflare Turnstile 验证 -->
+                      <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAAB2DjWw2W65iSLaN"></div>
+
+                      <div class="col-md-12">
+                          <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+<!-- 提交反馈消息 -->
+<div id="form-status" style="margin-top:15px;"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+
+  // 获取 Turnstile token
+      const token = document.querySelector('input[name="cf-turnstile-response"]')?.value;
+      if (!token) {
+        status.innerHTML = "<p style='color:red;'>⚠️ 请先完成验证码验证</p>";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send message";
+        return;
+    }
+
+    let data = new FormData(form);
+  data.append("cf-turnstile-response", token); // 附加 Turnstile token
+
+  try {
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+  });
+
+    if (response.ok) {
+      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+      form.reset();
+      if (window.turnstile) turnstile.reset(); // 重置验证码
+  } else {
+      status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+  }
+
+} catch (error) {
+    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+}
+
+submitBtn.disabled = false;
+submitBtn.innerText = "Send message";
+});
+</script>
+
+
+</div>
+<!-- End web form -->
+<!-- END COL -->
+<div class="col-md-5 col-sm-5 col-xs-12">
+    <div class="single_address">
+        <i class="fa fa-rocket color-five"></i>
+        <h4>Our Location</h4>
+
+        <p>Hong Kong、Shenzhen 、Miami</p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-phone color-six"></i>
+        <h4>Call us on</h4>
+
+        <p>+(852) 6501 3956 </p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-envelope color-seven"></i>
+        <h4>Send message</h4>
+
+        <p>service@graceliu.space</p>
+    </div>
+    <div class="single_address single_address_mbnone">
+        <i class="fa fa-lightbulb-o color-eight"></i>
+        <h4>Working Hours</h4>
+
+        <p>Sat-Mon:10.00AM-5.00PM</p>
+    </div>
+</div>
+<!-- END COL -->
+</div>
+<!-- END CONTACT -->
+</div>
+<!-- END ROW -->
+</div>
+<!--- END CONTAINER -->
+</section>
+<!-- END CONTACT FORM -->
+
+<!-- START MAP -->
+<!---<div id="map"></div>--->
+<!-- END MAP -->
+
+<!-- START FOOTER BOTTOM -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <p class="footer_copyright">Copyright &copy; 2015-2026.<a href="./index.html">Grace Studio</a> &nbsp;&nbsp;&nbsp; <a href="./隐私政策.html">隐私政策</a></p>
+            </div>
+            <!--- END COL -->
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <div class="footer_social">
+                    <ul>
+                        <li><a class="f_linkedin" target="_blank"
+                         href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i
+                         class="fa fa-linkedin"></i></a></li>
+                         <li><a class="f_wechat" target="_blank" href="../Carolyn_Wachat.jpg"><i
+                            class="fa fa-wechat"></i></a></li>
+                            <li><a class="f_envelope" href="mailto:service@graceliu.space"><i
+                                class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </footer>
+<!-- END FOOTER BOTTOM-->
+
+<!-- turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Latest jQuery -->
+<script src="../assets/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizer JS -->
+<script src="../assets/js/modernizr-2.8.3.min.js"></script>
+<!-- stellar js -->
+<script src="../assets/js/jquery.stellar.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="../assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- jquery.prettyPhoto js -->
+<script src="../assets/js/jquery.prettyPhoto.js"></script>
+<!-- scrolltopcontrol js -->
+<script src="../assets/js/scrolltopcontrol.js"></script>
+<!-- form-contact js -->
+<script src="../assets/js/form-contact.js"></script>
+<!-- WOW - Reveal Animations When You Scroll -->
+<script src="../assets/js/wow.min.js"></script>
+<!-- map js -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>--->
+<!-- scripts js -->
+<script src="../assets/js/scripts.js"></script>
+</body>
+</html>
