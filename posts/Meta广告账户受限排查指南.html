@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYBBNFSDT6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CYBBNFSDT6');
+</script>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>Meta广告账户异常排查指南|Grace Studio海外社媒工作室</title>
+    <meta name="description" content="Meta广告账户被限、CPM飙升、转化下降？四步排雷指南助你解决支付、内容、历史、受众问题，80%账户异常可规避">
+    <meta name="keywords" content="Meta广告账户,广告账户排查,Meta广告优化,广告账户异常解决,海外社媒投放">
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.css">
+    <!--prettyPhoto css-->
+    <link href="../assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <style>/* 全局设置 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* 标题样式 */
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* 段落样式 */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 列表样式 */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+
+<!-- START NAVBAR -->
+<div id="sticker" class="navbar navbar-default menu-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand"><img src="../assets/img/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="../index.html">Home</a></li>
+                    <li><a class="page-scroll" href="https://graceliu.space/posts">Posts</a></li>
+<li><a class="page-scroll" href="../关于我们.html">About</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--- END CONTAINER -->
+</div>
+<!-- END NAVBAR -->
+
+<!-- START POSTS TABLE -->
+<section class="our_pricing section-padding">
+    <div class="container">
+        <div class="row pricing">
+            <div>
+<h1 id="meta-">Meta 广告账户炸了？四步排雷指南</h1>
+<p>别慌，账户被限、CPM 飙上天、转化掉谷底——这破事我见多了。不是单一原因，得按流程扒。直接上框架，别整虚的。  </p>
+<h2 id="1-">1. 支付维度：先看钱的事儿</h2>
+<p><strong>核心：环境一致性 + 信用额度</strong>  </p>
+<ul>
+<li><strong>支付国别匹配</strong>：信用卡发行国、BM 注册地、操作 IP 必须逻辑一致。支付时切 VPN？秒触发风控，想死就试。  </li>
+<li><strong>余额与扣费防线</strong>：卡内余额必须足！一次「Payment Failed」就让账户权重跳水。建议主卡用大行高信誉卡，再绑个备用卡防跳票。  </li>
+<li><strong>卡段信誉检查</strong>：别用廉价虚拟卡！换素材还秒挂？大概率卡段被「连坐」了，换卡吧。  </li>
+</ul>
+<h2 id="2-">2. 内容维度：素材别踩软雷</h2>
+<p><strong>核心：合规度 + 落地页体验</strong>  </p>
+<p>Meta 的 AI 贼严，广告没被封但跑不动？十有八九被「软隔离」了。  </p>
+<ul>
+<li><strong>文案视觉禁区</strong>：<code>前后对比图（Before &amp; After）</code>、过度裸露、「3 天暴瘦」这种夸大词、诱导点击——全是坑。  </li>
+<li><strong>去重处理</strong>：别直接搬别人跑烂的素材！抽帧、镜像、改 MD5 值，至少让系统觉得「新」。  </li>
+<li><strong>落地页（LP）权重</strong>：加载慢、弹窗多、内容和广告不符？Meta 会判你「欺骗性投放」，点击率再高也白搭。  </li>
+</ul>
+<h2 id="3-">3. 历史维度：清理烂摊子</h2>
+<p><strong>核心：关联风险 + 信用积累</strong>  </p>
+<ul>
+<li><strong>主页评分（Page Score）</strong>：低于 2 分？CPM 比竞品高几倍！定期看「公共主页质量」，清差评、发优质帖养权重。  </li>
+<li><strong>资产隔离</strong>：BM 里有封禁账户/个人号？赶紧删！Meta 有「连坐机制」，一颗老鼠屎坏一锅汤。  </li>
+<li><strong>申诉克制</strong>：明显违规还反复申诉？只会让系统永久拉黑你，认栽重来更快。  </li>
+</ul>
+<h2 id="4-">4. 受众维度：别自己卷自己</h2>
+<p><strong>核心：避免重叠 + 负面反馈</strong>  </p>
+<ul>
+<li><strong>受众重叠（Overlap）</strong>：多个广告组抢同一批人？内部竞价直接让广告「跑不动」。用「受众重叠工具」查，重合率高就排除或合并。  </li>
+<li><strong>负面反馈监控</strong>：用户频繁点「隐藏广告」或举报？系统会觉得你内容垃圾，直接限流量。广告得分低了，立刻换素材，别犹豫。  </li>
+</ul>
+<h2 id="-">✅ 诊断操作流程</h2>
+<blockquote>
+<p>查支付 → 看主页 → 测素材 → 比对数据  </p>
+</blockquote>
+<ul>
+<li>如果 <code>全新素材 + 宽泛定向</code> 依然跑不动 → 账户权重已死，换户吧，别挣扎。  </li>
+<li>如果数据回升 → 之前的受众或素材进「黑名单」了，弃用就行。  </li>
+</ul>
+<h3 id="-grace-">💡 Grace 的避坑私房话</h3>
+<p>别迷信「申诉能救一切」，Meta 系统认数据不认眼泪。账户出问题先按这四步排查，80% 的坑都能避开。记住：支付环境稳、素材合规、历史干净、受众不内卷——这才是 Meta 广告的生存之道。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+           </div>
+      </div>
+    <!--- END ROW -->
+  </div>
+<!--- END CONTAINER -->
+</section>
+<!-- END POSTS TABLE -->
+
+
+<!-- START CONTACT FORM  -->
+<section id="contact" class="contact-us section-padding">
+    <div class="container">
+        <div class="row ">
+            <div class="section-title text-center wow zoomIn">
+                <h2>Get in touch</h2>
+                <span></span>
+            </div>
+            <div class="contact" style="background-image: url(../assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                <!-- web form -->
+                <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <input type="text" name="name" class="form-control" placeholder="Name" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                          <input type="email" name="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group col-md-12 mbnone">
+                          <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                      </div>
+
+                      <!-- Honeypot 防垃圾 -->
+                      <div style="display:none;">
+                          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                      </div>
+
+                      <!-- Cloudflare Turnstile 验证 -->
+                      <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAAB2DjWw2W65iSLaN"></div>
+
+                      <div class="col-md-12">
+                          <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+<!-- 提交反馈消息 -->
+<div id="form-status" style="margin-top:15px;"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+
+  // 获取 Turnstile token
+      const token = document.querySelector('input[name="cf-turnstile-response"]')?.value;
+      if (!token) {
+        status.innerHTML = "<p style='color:red;'>⚠️ 请先完成验证码验证</p>";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send message";
+        return;
+    }
+
+    let data = new FormData(form);
+  data.append("cf-turnstile-response", token); // 附加 Turnstile token
+
+  try {
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+  });
+
+    if (response.ok) {
+      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+      form.reset();
+      if (window.turnstile) turnstile.reset(); // 重置验证码
+  } else {
+      status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+  }
+
+} catch (error) {
+    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+}
+
+submitBtn.disabled = false;
+submitBtn.innerText = "Send message";
+});
+</script>
+
+
+</div>
+<!-- End web form -->
+<!-- END COL -->
+<div class="col-md-5 col-sm-5 col-xs-12">
+    <div class="single_address">
+        <i class="fa fa-rocket color-five"></i>
+        <h4>Our Location</h4>
+
+        <p>Hong Kong、Shenzhen 、Miami</p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-phone color-six"></i>
+        <h4>Call us on</h4>
+
+        <p>+(852) 6501 3956 </p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-envelope color-seven"></i>
+        <h4>Send message</h4>
+
+        <p>service@graceliu.space</p>
+    </div>
+    <div class="single_address single_address_mbnone">
+        <i class="fa fa-lightbulb-o color-eight"></i>
+        <h4>Working Hours</h4>
+
+        <p>Sat-Mon:10.00AM-5.00PM</p>
+    </div>
+</div>
+<!-- END COL -->
+</div>
+<!-- END CONTACT -->
+</div>
+<!-- END ROW -->
+</div>
+<!--- END CONTAINER -->
+</section>
+<!-- END CONTACT FORM -->
+
+<!-- START MAP -->
+<!---<div id="map"></div>--->
+<!-- END MAP -->
+
+<!-- START FOOTER BOTTOM -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <p class="footer_copyright">Copyright &copy; 2015-2026.<a href="../index.html">Grace Studio</a> &nbsp;&nbsp;&nbsp; <a href="../隐私政策.html">隐私政策</a></p>
+            </div>
+            <!--- END COL -->
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <div class="footer_social">
+                    <ul>
+                        <li><a class="f_linkedin" target="_blank"
+                         href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i
+                         class="fa fa-linkedin"></i></a></li>
+                         <li><a class="f_wechat" target="_blank" href="../Carolyn_Wachat.jpg"><i
+                            class="fa fa-wechat"></i></a></li>
+                            <li><a class="f_envelope" href="mailto:service@graceliu.space"><i
+                                class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </footer>
+<!-- END FOOTER BOTTOM-->
+
+<!-- turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Latest jQuery -->
+<script src="../assets/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizer JS -->
+<script src="../assets/js/modernizr-2.8.3.min.js"></script>
+<!-- stellar js -->
+<script src="../assets/js/jquery.stellar.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="../assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- jquery.prettyPhoto js -->
+<script src="../assets/js/jquery.prettyPhoto.js"></script>
+<!-- scrolltopcontrol js -->
+<script src="../assets/js/scrolltopcontrol.js"></script>
+<!-- form-contact js -->
+<script src="../assets/js/form-contact.js"></script>
+<!-- WOW - Reveal Animations When You Scroll -->
+<script src="../assets/js/wow.min.js"></script>
+<!-- map js -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>--->
+<!-- scripts js -->
+<script src="../assets/js/scripts.js"></script>
+</body>
+</html>
