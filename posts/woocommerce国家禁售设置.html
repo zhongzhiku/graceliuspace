@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2863459084595651"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYBBNFSDT6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CYBBNFSDT6');
+</script>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>WordPress WooCommerce 跨境禁售设置指南|从全局到单品的3大方案</title>
+    <meta name="description" content="WordPress WooCommerce 跨境禁售设置指南，从全局关闭国家销售通道、配送限制到单品精准禁售的3大方案及GeoIP终极拦截方法">
+    <meta name="keywords" content="WooCommerce 禁售设置,跨境电商禁售,WordPress 跨境设置,跨境物流限制,单品国家禁售">
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.css">
+    <!--prettyPhoto css-->
+    <link href="../assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <style>/* 全局设置 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* 标题样式 */
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* 段落样式 */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 列表样式 */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+
+<!-- START NAVBAR -->
+<div id="sticker" class="navbar navbar-default menu-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand"><img src="../assets/img/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="../index.html">Home</a></li>
+                    <li><a class="page-scroll" href="https://graceliu.space/posts">Posts</a></li>
+<li><a class="page-scroll" href="../关于我们.html">About</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--- END CONTAINER -->
+</div>
+<!-- END NAVBAR -->
+
+<!-- START POSTS TABLE -->
+<section class="our_pricing section-padding">
+    <div class="container">
+        <div class="row pricing">
+            <div>
+<h2 id="wordpress-woocommerce-3-">WordPress + WooCommerce 跨境禁售设置指南：从全局到单品的3大方案</h2>
+<h3 id="1-">1. 全局一刀切：彻底关闭特定国家销售通道</h3>
+<p><strong>适用场景</strong>： entire shop 不打算做某国生意，比如物流成本高到离谱的地区  </p>
+<p><strong>路径</strong>： WooCommerce → 设置 → 常规 (General)  </p>
+<p><strong>操作步骤</strong>：  </p>
+<ul>
+<li>找到 “销售地点” (Selling location(s))  </li>
+<li><strong>选 “向特定国家销售，除了...”</strong>，输入禁售国家<br><em>or</em>  </li>
+<li>选 “销售给特定国家”，只填允许的国家  </li>
+<li>配送地点 (Shipping location(s)) 建议选 “配送至所有你销售的国家”  </li>
+</ul>
+<p><strong>效果</strong>： 结账页国家下拉菜单直接 <strong>隐藏禁售选项</strong>，用户根本看不到，想下单都没门  </p>
+<h3 id="2-">2. 配送卡脖子：用物流限制变相禁售</h3>
+<p><strong>适用场景</strong>： 想留个口子（比如允许本地自提），但不想发快递到某国  </p>
+<p><strong>路径</strong>： WooCommerce → 设置 → 配送 (Shipping) → 配送区域 (Shipping zones)  </p>
+<p><strong>操作步骤</strong>：  </p>
+<ul>
+<li>只添加目标国家为配送区域（比如 美国、英国、澳大利亚）  </li>
+<li><strong>绝对不要添加禁售国家</strong>（比如 俄罗斯、巴西，别问为什么，清关你懂的）  </li>
+</ul>
+<p><strong>效果</strong>： 用户填完地址会看到 “没有任何配送方式适用于您输入的地址”，比直接隐藏更柔和，但同样能挡单  </p>
+<h3 id="3-">3. 单品精准打击：特定产品只对部分国家开放</h3>
+<p><strong>适用场景</strong>： 比如 电池、液体 这类敏感品，在欧盟需要 CE 认证，没认证就只能禁售  </p>
+<p><strong>必须插件</strong>：  </p>
+<ul>
+<li>Country Based Restrictions for WooCommerce（免费版够用）  </li>
+<li>WooCommerce Product Restrictions by Location（付费功能更全）  </li>
+</ul>
+<p><strong>操作流程</strong>：<br>产品编辑页 → 找到新出现的 &quot;Country Restrictions&quot; 选项栏 → <strong>选 &quot;Exclude&quot;</strong> → 勾选禁售国家  </p>
+<p><strong>效果</strong>： 该产品在禁售国家 IP 下显示 “不可购买”，其他地区正常销售  </p>
+<h3 id="4-geoip-">4. 终极拦截：连网站都不让他看（GeoIP 玩法）</h3>
+<p><strong>适用场景</strong>： 某国恶意下单太多，或者法律风险极高（比如 伊朗、朝鲜）  </p>
+<p><strong>2种实现方式</strong>：  </p>
+<ul>
+<li><strong>Cloudflare WAF</strong>： 防火墙规则 → 国家/地区匹配 → 直接 “阻断” 流量  </li>
+<li><strong>WooCommerce 地理定位</strong>： 设置 → 常规 → 默认客户位置 → 开启 “Geolocate”，自动识别用户所在国并应用限制  </li>
+</ul>
+<h3 id="-grace-">💡 Grace 的避坑私房话</h3>
+<ol>
+<li><strong>别光搞技术，法律擦屁股更麻烦</strong>： 在 Shipping Policy 页面 <strong>明明白白列出禁售国家</strong>，别等客户填完信用卡才说不行，搞不好会被投诉欺诈  </li>
+<li><strong>支付网关是最后一道坎</strong>： 比如 Stripe 不支持 尼日利亚，你就算开了销售权限，客户也付不了款，白折腾  </li>
+<li><strong>建议组合拳</strong>： 全局禁售 + 配送限制 双保险，毕竟 WooCommerce 偶尔会抽风，多一道门少一堆事</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+           </div>
+      </div>
+    <!--- END ROW -->
+  </div>
+<!--- END CONTAINER -->
+</section>
+<!-- END POSTS TABLE -->
+
+
+<!-- START CONTACT FORM  -->
+<section id="contact" class="contact-us section-padding">
+    <div class="container">
+        <div class="row ">
+            <div class="section-title text-center wow zoomIn">
+                <h2>Get in touch</h2>
+                <span></span>
+            </div>
+            <div class="contact" style="background-image: url(../assets/img/bg/contact-bg.jpg); background-size:cover; background-position: center center;">
+                <!-- web form -->
+                <div class="col-md-7 col-sm-7 col-xs-12 mt60 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <form id="contact-form" action="https://formspree.io/f/xeolnzlb" method="POST">
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <input type="text" name="name" class="form-control" placeholder="Name" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                          <input type="email" name="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group col-md-12 mbnone">
+                          <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                      </div>
+
+                      <!-- Honeypot 防垃圾 -->
+                      <div style="display:none;">
+                          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                      </div>
+
+                      <!-- Cloudflare Turnstile 验证 -->
+                      <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAAB2DjWw2W65iSLaN"></div>
+
+                      <div class="col-md-12">
+                          <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn btn-lg btn-contact-bg">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+<!-- 提交反馈消息 -->
+<div id="form-status" style="margin-top:15px;"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+
+  // 获取 Turnstile token
+      const token = document.querySelector('input[name="cf-turnstile-response"]')?.value;
+      if (!token) {
+        status.innerHTML = "<p style='color:red;'>⚠️ 请先完成验证码验证</p>";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send message";
+        return;
+    }
+
+    let data = new FormData(form);
+  data.append("cf-turnstile-response", token); // 附加 Turnstile token
+
+  try {
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+  });
+
+    if (response.ok) {
+      status.innerHTML = "<p style='color:green;'>✅ 提交成功，我们会尽快联系您！</p>";
+      form.reset();
+      if (window.turnstile) turnstile.reset(); // 重置验证码
+  } else {
+      status.innerHTML = "<p style='color:red;'>❌ 提交失败，请稍后再试</p>";
+  }
+
+} catch (error) {
+    status.innerHTML = "<p style='color:red;'>⚠️ 网络错误，请检查连接</p>";
+}
+
+submitBtn.disabled = false;
+submitBtn.innerText = "Send message";
+});
+</script>
+
+
+</div>
+<!-- End web form -->
+<!-- END COL -->
+<div class="col-md-5 col-sm-5 col-xs-12">
+    <div class="single_address">
+        <i class="fa fa-rocket color-five"></i>
+        <h4>Our Location</h4>
+
+        <p>Hong Kong、Shenzhen 、Miami</p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-phone color-six"></i>
+        <h4>Call us on</h4>
+
+        <p>+(852) 6501 3956 </p>
+    </div>
+    <div class="single_address">
+        <i class="fa fa-envelope color-seven"></i>
+        <h4>Send message</h4>
+
+        <p>service@graceliu.space</p>
+    </div>
+    <div class="single_address single_address_mbnone">
+        <i class="fa fa-lightbulb-o color-eight"></i>
+        <h4>Working Hours</h4>
+
+        <p>Sat-Mon:10.00AM-5.00PM</p>
+    </div>
+</div>
+<!-- END COL -->
+</div>
+<!-- END CONTACT -->
+</div>
+<!-- END ROW -->
+</div>
+<!--- END CONTAINER -->
+</section>
+<!-- END CONTACT FORM -->
+
+<!-- START MAP -->
+<!---<div id="map"></div>--->
+<!-- END MAP -->
+
+<!-- START FOOTER BOTTOM -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <p class="footer_copyright">Copyright &copy; 2015-2026.<a href="../index.html">Grace Studio</a> &nbsp;&nbsp;&nbsp; <a href="../隐私政策.html">隐私政策</a></p>
+            </div>
+            <!--- END COL -->
+            <div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+                <div class="footer_social">
+                    <ul>
+                        <li><a class="f_linkedin" target="_blank"
+                         href="https://www.linkedin.com/in/grace-lau-marketing/" target="_blank"><i
+                         class="fa fa-linkedin"></i></a></li>
+                         <li><a class="f_wechat" target="_blank" href="../Carolyn_Wachat.jpg"><i
+                            class="fa fa-wechat"></i></a></li>
+                            <li><a class="f_envelope" href="mailto:service@graceliu.space"><i
+                                class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </footer>
+<!-- END FOOTER BOTTOM-->
+
+<!-- turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Latest jQuery -->
+<script src="../assets/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizer JS -->
+<script src="../assets/js/modernizr-2.8.3.min.js"></script>
+<!-- stellar js -->
+<script src="../assets/js/jquery.stellar.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="../assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- jquery.prettyPhoto js -->
+<script src="../assets/js/jquery.prettyPhoto.js"></script>
+<!-- scrolltopcontrol js -->
+<script src="../assets/js/scrolltopcontrol.js"></script>
+<!-- form-contact js -->
+<script src="../assets/js/form-contact.js"></script>
+<!-- WOW - Reveal Animations When You Scroll -->
+<script src="../assets/js/wow.min.js"></script>
+<!-- map js -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>--->
+<!-- scripts js -->
+<script src="../assets/js/scripts.js"></script>
+</body>
+</html>
